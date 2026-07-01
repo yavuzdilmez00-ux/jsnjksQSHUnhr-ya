@@ -2,7 +2,7 @@ import os
 import json
 import concurrent.futures
 from bs4 import BeautifulSoup
-import cloudscraper
+from curl_cffi import requests # cloudscraper yerine TLS parmak izi taklidi yapan curl_cffi kullanıyoruz
 
 # Site üzerindeki harf URL yapıları (Ç->cc, Ş->ss vb.)
 LETTERS = [
@@ -17,14 +17,8 @@ def get_article_links(letter):
     links = []
     page = 1
     
-    # GitHub Actions IP'lerini engelleyen güvenlik duvarlarını (Cloudflare vb.) aşmak için cloudscraper
-    scraper = cloudscraper.create_scraper(
-        browser={
-            'browser': 'chrome',
-            'platform': 'windows',
-            'desktop': True
-        }
-    )
+    # Chrome 120 TLS parmak izini taklit ederek Cloudflare'i aşıyoruz
+    session = requests.Session(impersonate="chrome120")
     
     while True:
         if page == 1:
@@ -33,34 +27,27 @@ def get_article_links(letter):
             url = f"{BASE_URL}/yorum/harf/{letter}/page/{page}"
             
         try:
-            response = scraper.get(url, timeout=20)
+            response = session.get(url, timeout=30)
             
-            # DEBUG 1: HTTP Durum Kodunu kontrol edelim
             if response.status_code != 200:
                 if response.status_code != 404:
                     print(f"HATA: Durum Kodu ({letter} - Sayfa {page}): {response.status_code}")
-                    print(f"HATA DETAYI: {response.text[:300]}") # Sitenin verdiği hatanın ilk 300 karakteri
                 break 
                 
             soup = BeautifulSoup(response.text, 'html.parser')
             
-            # Sayfanın başlığını kontrol ederek doğrulama (captcha/challenge) sayfasına düşüp düşmediğimizi görelim
-            if soup.title and ("Just a moment" in soup.title.text or "Cloudflare" in soup.title.text or "Attention Required" in soup.title.text):
+            if soup.title and ("Just a moment" in soup.title.text or "Cloudflare" in soup.title.text):
                 print(f"UYARI: Bot korumasına takıldı (Cloudflare): {url}")
                 break
 
             articles = soup.select('.singlebox-wrapper a')
             
-            # Ana seçici çalışmazsa, hiçbir şeyi silmeden alternatif bir HTML arama yöntemi uyguluyoruz
             if not articles:
                 articles = soup.select('.singlebox h2')
                 if not articles:
-                    # DEBUG 2: Etiketler yoksa site bize ne döndürdü? İlk 500 karakteri ekrana yazdırıyoruz.
-                    print(f"DEBUG: '{letter}' harfi {page}. sayfada içerik etiketi bulunamadı!")
-                    print(f"SİTENİN DÖNDÜRDÜĞÜ HTML (İlk 500 Karakter):\n{response.text[:500]}\n{'-'*50}")
+                    print(f"BİLGİ: '{letter}' harfi {page}. sayfada içerik bitti veya bulunamadı.")
                     break
                 else:
-                    # Sadece h2 bulunduysa bir üstündeki a etiketini (linki) yakala
                     articles = [h2.find_parent('a') for h2 in articles if h2.find_parent('a')]
                 
             for a in articles:
@@ -78,9 +65,10 @@ def get_article_links(letter):
 
 def scrape_article(url):
     """Tek bir rüya tabiri sayfasından başlık ve içeriği çeker."""
-    scraper = cloudscraper.create_scraper(browser={'browser': 'chrome', 'platform': 'windows', 'desktop': True})
+    # Her bir iş parçacığı için de Chrome taklidi yapıyoruz
+    session = requests.Session(impersonate="chrome120")
     try:
-        response = scraper.get(url, timeout=20)
+        response = session.get(url, timeout=30)
         if response.status_code != 200:
             return None
             
@@ -90,17 +78,14 @@ def scrape_article(url):
         if not content_div:
             return None
             
-        # Başlığı al
         title_tag = content_div.select_one('h2')
         title = title_tag.get_text(strip=True) if title_tag else "Başlıksız"
         
-        # Gereksiz kısımları DOM'dan temizle (Reklamlar, yorumlar, sosyal medya vs.)
         unwanted_selectors = ['.ads', '.ads2', '.ads3', '.ads-bottom', '.socials', 'script', 'style', 'h2']
         for selector in unwanted_selectors:
             for el in content_div.select(selector):
                 el.decompose()
                 
-        # Sadece paragrafları ve alt başlıkları (h3) al
         text_elements = content_div.find_all(['p', 'h3'])
         content_parts = []
         for el in text_elements:
@@ -132,7 +117,6 @@ def main():
         
         letter_data = []
         
-        # İstek limiti (Rate limit) yememek için eşzamanlı işlemi biraz düşürüyoruz (10'dan 5'e)
         with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
             results = list(executor.map(scrape_article, set(links)))
             
@@ -141,14 +125,12 @@ def main():
                 letter_data.append(res)
                 all_data.append(res)
                 
-        # Harfe özel JSON dosyasını kaydet
         file_path = os.path.join('veri', f"{letter}.json")
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(letter_data, f, ensure_ascii=False, indent=4)
             
         print(f"'{letter}' harfi tamamlandı. ({len(letter_data)} kayıt)")
 
-    # Tüm verileri tek bir JSON dosyasında kaydet
     all_file_path = os.path.join('veri', "tumu.json")
     with open(all_file_path, 'w', encoding='utf-8') as f:
         json.dump(all_data, f, ensure_ascii=False, indent=4)
