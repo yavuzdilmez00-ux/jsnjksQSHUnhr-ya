@@ -12,12 +12,16 @@ LETTERS = [
 
 BASE_URL = "https://www.ruyatabirleri.com"
 
+# Arama motoru taklidi için başlıklar (CF genellikle arama motorlarına izin verir)
+GOOGLEBOT_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
+}
+
 def get_article_links(letter):
     """Bir harfe ait tüm sayfalardaki rüya linklerini toplar."""
     links = []
     page = 1
     
-    # Chrome 120 TLS parmak izini taklit ederek Cloudflare'i aşıyoruz
     session = requests.Session(impersonate="chrome120")
     
     while True:
@@ -29,10 +33,15 @@ def get_article_links(letter):
         try:
             response = session.get(url, timeout=30)
             
-            # HİÇBİR ŞEYİ SİLMEDEN EKLENEN KISIM: 403 veya CF engeli gelirse Proxy üzerinden tekrar dene
-            if response.status_code == 403 or (response.status_code == 200 and "Just a moment" in response.text):
-                proxy_url = f"https://api.allorigins.win/raw?url={url}"
-                response = session.get(proxy_url, timeout=30)
+            # HİÇBİR ŞEYİ SİLMEDEN CF Engeli ve 5XX Hataları için İKİLİ FALLBACK
+            if response.status_code in [403, 500, 502, 520, 522] or (response.status_code == 200 and "Just a moment" in response.text):
+                # 1. Aşama: Googlebot taklidi ile doğrudan istek
+                response = requests.get(url, headers=GOOGLEBOT_HEADERS, timeout=30, impersonate=None)
+                
+                # Hala hata veriyorsa 2. Aşama: Daha stabil olan corsproxy.io üzerinden istek
+                if response.status_code != 200 or "Just a moment" in response.text:
+                    proxy_url = f"https://corsproxy.io/?{url}"
+                    response = session.get(proxy_url, timeout=30)
 
             if response.status_code != 200:
                 if response.status_code != 404:
@@ -74,10 +83,13 @@ def scrape_article(url):
     try:
         response = session.get(url, timeout=30)
         
-        # HİÇBİR ŞEYİ SİLMEDEN EKLENEN KISIM: İçerik çekerken CF engeli gelirse Proxy üzerinden tekrar dene
-        if response.status_code == 403 or (response.status_code == 200 and "Just a moment" in response.text):
-            proxy_url = f"https://api.allorigins.win/raw?url={url}"
-            response = session.get(proxy_url, timeout=30)
+        # İçerik çekerken CF engeline takılırsak İKİLİ FALLBACK
+        if response.status_code in [403, 500, 502, 520, 522] or (response.status_code == 200 and "Just a moment" in response.text):
+            response = requests.get(url, headers=GOOGLEBOT_HEADERS, timeout=30, impersonate=None)
+            
+            if response.status_code != 200 or "Just a moment" in response.text:
+                proxy_url = f"https://corsproxy.io/?{url}"
+                response = session.get(proxy_url, timeout=30)
 
         if response.status_code != 200:
             return None
