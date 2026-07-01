@@ -34,16 +34,19 @@ def get_article_links(letter):
             
         try:
             response = scraper.get(url, timeout=20)
+            
+            # DEBUG 1: HTTP Durum Kodunu kontrol edelim
             if response.status_code != 200:
                 if response.status_code != 404:
-                    print(f"Durum Kodu ({letter} - Sayfa {page}): {response.status_code}")
+                    print(f"HATA: Durum Kodu ({letter} - Sayfa {page}): {response.status_code}")
+                    print(f"HATA DETAYI: {response.text[:300]}") # Sitenin verdiği hatanın ilk 300 karakteri
                 break 
                 
             soup = BeautifulSoup(response.text, 'html.parser')
             
             # Sayfanın başlığını kontrol ederek doğrulama (captcha/challenge) sayfasına düşüp düşmediğimizi görelim
-            if soup.title and ("Just a moment" in soup.title.text or "Cloudflare" in soup.title.text):
-                print(f"Bot korumasına takıldı: {url}")
+            if soup.title and ("Just a moment" in soup.title.text or "Cloudflare" in soup.title.text or "Attention Required" in soup.title.text):
+                print(f"UYARI: Bot korumasına takıldı (Cloudflare): {url}")
                 break
 
             articles = soup.select('.singlebox-wrapper a')
@@ -52,6 +55,9 @@ def get_article_links(letter):
             if not articles:
                 articles = soup.select('.singlebox h2')
                 if not articles:
+                    # DEBUG 2: Etiketler yoksa site bize ne döndürdü? İlk 500 karakteri ekrana yazdırıyoruz.
+                    print(f"DEBUG: '{letter}' harfi {page}. sayfada içerik etiketi bulunamadı!")
+                    print(f"SİTENİN DÖNDÜRDÜĞÜ HTML (İlk 500 Karakter):\n{response.text[:500]}\n{'-'*50}")
                     break
                 else:
                     # Sadece h2 bulunduysa bir üstündeki a etiketini (linki) yakala
@@ -65,7 +71,7 @@ def get_article_links(letter):
             
             page += 1
         except Exception as e:
-            print(f"Hata ({letter} - Sayfa {page}): {e}")
+            print(f"SİSTEM HATASI ({letter} - Sayfa {page}): {e}")
             break
             
     return links
