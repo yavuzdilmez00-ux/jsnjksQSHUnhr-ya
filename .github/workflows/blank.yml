@@ -1,0 +1,41 @@
+name: Rüya Tabirleri JSON Scraper
+
+on:
+  workflow_dispatch: # Sadece manuel tetikleme ile çalışır
+  # schedule:
+  #   - cron: '0 0 1 * *' # İsterseniz her ayın 1'inde otomatik çalışması için burayı açabilirsiniz
+
+# Depoya yazma izni burada tanımlanıyor
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-commit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Repoyu Klonla
+        uses: actions/checkout@v3
+
+      - name: Python'u Kur
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: Bağımlılıkları Yükle
+        run: |
+          python -m pip install --upgrade pip
+          # Kütüphaneler doğrudan YML içine eklendi
+          pip install requests beautifulsoup4
+          
+      - name: Scraper'ı Çalıştır
+        run: python scraper.py
+        
+      - name: Değişiklikleri Commit Et ve Pushla
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add veri/*.json
+          # Veriler depoya yazılıyor
+          git commit -m "JSON verileri güncellendi" || echo "Değişiklik yok, commit atlanıyor."
+          git push
