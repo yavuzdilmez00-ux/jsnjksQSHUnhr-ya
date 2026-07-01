@@ -19,11 +19,12 @@ jobs:
         with:
           python-version: '3.10'
           
-      - name: Bağımlılıkları Yükle
+      - name: Bağımlılıkları Yükle ve Tarayıcıyı Kur
         run: |
           python -m pip install --upgrade pip
-          # cloudscraper yerine curl_cffi ekledik
-          pip install curl_cffi beautifulsoup4
+          pip install playwright beautifulsoup4
+          # Gerçek Chromium tarayıcısını ve bağımlılıklarını GitHub sunucusuna indirir
+          playwright install --with-deps chromium
           
       - name: Scraper'ı Çalıştır
         run: python scraper.py
