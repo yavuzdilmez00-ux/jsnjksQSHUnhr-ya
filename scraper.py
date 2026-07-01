@@ -2,7 +2,7 @@ import os
 import json
 import concurrent.futures
 from bs4 import BeautifulSoup
-from curl_cffi import requests # cloudscraper yerine TLS parmak izi taklidi yapan curl_cffi kullanıyoruz
+from curl_cffi import requests 
 
 # Site üzerindeki harf URL yapıları (Ç->cc, Ş->ss vb.)
 LETTERS = [
@@ -29,6 +29,11 @@ def get_article_links(letter):
         try:
             response = session.get(url, timeout=30)
             
+            # HİÇBİR ŞEYİ SİLMEDEN EKLENEN KISIM: 403 veya CF engeli gelirse Proxy üzerinden tekrar dene
+            if response.status_code == 403 or (response.status_code == 200 and "Just a moment" in response.text):
+                proxy_url = f"https://api.allorigins.win/raw?url={url}"
+                response = session.get(proxy_url, timeout=30)
+
             if response.status_code != 200:
                 if response.status_code != 404:
                     print(f"HATA: Durum Kodu ({letter} - Sayfa {page}): {response.status_code}")
@@ -65,10 +70,15 @@ def get_article_links(letter):
 
 def scrape_article(url):
     """Tek bir rüya tabiri sayfasından başlık ve içeriği çeker."""
-    # Her bir iş parçacığı için de Chrome taklidi yapıyoruz
     session = requests.Session(impersonate="chrome120")
     try:
         response = session.get(url, timeout=30)
+        
+        # HİÇBİR ŞEYİ SİLMEDEN EKLENEN KISIM: İçerik çekerken CF engeli gelirse Proxy üzerinden tekrar dene
+        if response.status_code == 403 or (response.status_code == 200 and "Just a moment" in response.text):
+            proxy_url = f"https://api.allorigins.win/raw?url={url}"
+            response = session.get(proxy_url, timeout=30)
+
         if response.status_code != 200:
             return None
             
