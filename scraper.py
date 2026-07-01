@@ -12,11 +12,20 @@ LETTERS = [
 
 BASE_URL = "https://www.ruyatabirleri.com"
 
+# Sunucunun bizi bot olarak algılamaması için gerçek tarayıcı başlıkları
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'Accept-Language': 'tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7',
+}
+
 def get_article_links(letter):
     """Bir harfe ait tüm sayfalardaki rüya linklerini toplar."""
     links = []
     page = 1
     session = requests.Session()
+    # Oturuma tarayıcı başlıklarını ekliyoruz
+    session.headers.update(HEADERS)
     
     while True:
         if page == 1:
@@ -25,9 +34,13 @@ def get_article_links(letter):
             url = f"{BASE_URL}/yorum/harf/{letter}/page/{page}"
             
         try:
-            response = session.get(url, timeout=10)
+            response = session.get(url, timeout=15)
+            # Sayfa bitti veya bulunamadı ise döngüyü kır
             if response.status_code != 200:
-                break # Sayfa bitti veya bulunamadı
+                # Sunucu hatası dönüyorsa loglayalım
+                if response.status_code != 404:
+                    print(f"Durum Kodu ({letter} - Sayfa {page}): {response.status_code}")
+                break 
                 
             soup = BeautifulSoup(response.text, 'html.parser')
             articles = soup.select('.singlebox-wrapper a')
@@ -50,7 +63,8 @@ def get_article_links(letter):
 def scrape_article(url):
     """Tek bir rüya tabiri sayfasından başlık ve içeriği çeker."""
     try:
-        response = requests.get(url, timeout=10)
+        # Tekil sayfalara giderken de tarayıcı başlıklarını gönderiyoruz
+        response = requests.get(url, headers=HEADERS, timeout=15)
         if response.status_code != 200:
             return None
             
