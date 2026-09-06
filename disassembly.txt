@@ -1,0 +1,1028 @@
+  0           RESUME                   0
+
+  1           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              0 (cloudscraper)
+              STORE_NAME               0 (cloudscraper)
+
+  2           LOAD_CONST               0 (0)
+              LOAD_CONST               2 (('BeautifulSoup',))
+              IMPORT_NAME              1 (bs4)
+              IMPORT_FROM              2 (BeautifulSoup)
+              STORE_NAME               2 (BeautifulSoup)
+              POP_TOP
+
+  3           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              3 (json)
+              STORE_NAME               3 (json)
+
+  4           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              4 (time)
+              STORE_NAME               4 (time)
+
+  5           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              5 (os)
+              STORE_NAME               5 (os)
+
+  6           LOAD_CONST               0 (0)
+              LOAD_CONST               3 (('ThreadPoolExecutor', 'as_completed'))
+              IMPORT_NAME              6 (concurrent.futures)
+              IMPORT_FROM              7 (ThreadPoolExecutor)
+              STORE_NAME               7 (ThreadPoolExecutor)
+              IMPORT_FROM              8 (as_completed)
+              STORE_NAME               8 (as_completed)
+              POP_TOP
+
+  8           LOAD_BUILD_CLASS
+              PUSH_NULL
+              LOAD_CONST               4 (<code object JetFilmizleScraper at 0x7f752db62cd0, file "<protected>", line 8>)
+              MAKE_FUNCTION
+              LOAD_CONST               5 ('JetFilmizleScraper')
+              CALL                     2
+              STORE_NAME               9 (JetFilmizleScraper)
+
+152           LOAD_NAME               10 (__name__)
+              LOAD_CONST               6 ('__main__')
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       36 (to L1)
+
+153           LOAD_NAME                9 (JetFilmizleScraper)
+              PUSH_NULL
+              CALL                     0
+              STORE_NAME              11 (bot)
+
+154           LOAD_NAME               11 (bot)
+              LOAD_ATTR               25 (scrape_jet + NULL|self)
+              LOAD_CONST               7 ('/filmler')
+              LOAD_CONST               8 (743)
+              LOAD_CONST               9 (('path', 'max_pages'))
+              CALL_KW                  2
+              STORE_NAME              13 (toplam_link)
+
+155           LOAD_NAME               14 (print)
+              PUSH_NULL
+              LOAD_CONST              10 ('\nİşlem bitti! Toplamda ')
+              LOAD_NAME               13 (toplam_link)
+              FORMAT_SIMPLE
+              LOAD_CONST              11 (' adet link eksiksiz şekilde M3U dosyasına kaydedildi.')
+              BUILD_STRING             3
+              CALL                     1
+              POP_TOP
+              RETURN_CONST             1 (None)
+
+152   L1:     RETURN_CONST             1 (None)
+
+Disassembly of <code object JetFilmizleScraper at 0x7f752db62cd0, file "<protected>", line 8>:
+  8           RESUME                   0
+              LOAD_NAME                0 (__name__)
+              STORE_NAME               1 (__module__)
+              LOAD_CONST               0 ('JetFilmizleScraper')
+              STORE_NAME               2 (__qualname__)
+              LOAD_CONST               1 (8)
+              STORE_NAME               3 (__firstlineno__)
+
+  9           LOAD_CONST               2 (<code object __init__ at 0x7f752df8b0f0, file "<protected>", line 9>)
+              MAKE_FUNCTION
+              STORE_NAME               4 (__init__)
+
+ 25           LOAD_CONST               3 (<code object get_d2rs_link at 0x7f752d1283f0, file "<protected>", line 25>)
+              MAKE_FUNCTION
+              STORE_NAME               5 (get_d2rs_link)
+
+ 37           LOAD_CONST               4 (<code object get_pixeldrain_link at 0x7f752db77af0, file "<protected>", line 37>)
+              MAKE_FUNCTION
+              STORE_NAME               6 (get_pixeldrain_link)
+
+ 47           LOAD_CONST               5 (<code object get_single_movie_data at 0x55f7d6894670, file "<protected>", line 47>)
+              MAKE_FUNCTION
+              STORE_NAME               7 (get_single_movie_data)
+
+ 86           LOAD_CONST               6 (<code object save_incremental at 0x55f7d69e85d0, file "<protected>", line 86>)
+              MAKE_FUNCTION
+              STORE_NAME               8 (save_incremental)
+
+111           LOAD_CONST              10 (('/filmler', 1))
+              LOAD_CONST               7 (<code object scrape_jet at 0x55f7d6895150, file "<protected>", line 111>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   1 (defaults)
+              STORE_NAME               9 (scrape_jet)
+              LOAD_CONST               8 (('filename', 'headers', 'main_url', 'scraper', 'total_saved_links'))
+              STORE_NAME              10 (__static_attributes__)
+              RETURN_CONST             9 (None)
+
+Disassembly of <code object __init__ at 0x7f752df8b0f0, file "<protected>", line 9>:
+   9           RESUME                   0
+
+  10           LOAD_CONST               1 ('https://jetfilmizle.net')
+               LOAD_FAST                0 (self)
+               STORE_ATTR               0 (main_url)
+
+  12           LOAD_FAST                0 (self)
+               LOAD_ATTR                0 (main_url)
+               FORMAT_SIMPLE
+               LOAD_CONST               2 ('/')
+               BUILD_STRING             2
+
+  13           LOAD_CONST               3 ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+
+  11           LOAD_CONST               4 (('Referer', 'User-Agent'))
+               BUILD_CONST_KEY_MAP      2
+               LOAD_FAST                0 (self)
+               STORE_ATTR               1 (headers)
+
+  15           LOAD_GLOBAL              4 (cloudscraper)
+               LOAD_ATTR                6 (create_scraper)
+               PUSH_NULL
+
+  16           LOAD_CONST               5 ('chrome')
+               LOAD_CONST               6 ('windows')
+               LOAD_CONST               7 (True)
+               LOAD_CONST               8 (('browser', 'platform', 'desktop'))
+               BUILD_CONST_KEY_MAP      3
+
+  15           LOAD_CONST               9 (('browser',))
+               CALL_KW                  1
+               LOAD_FAST                0 (self)
+               STORE_ATTR               4 (scraper)
+
+  18           LOAD_CONST              10 ('jetfilm_tum.m3u')
+               LOAD_FAST                0 (self)
+               STORE_ATTR               5 (filename)
+
+  19           LOAD_CONST              11 (0)
+               LOAD_FAST                0 (self)
+               STORE_ATTR               6 (total_saved_links)
+
+  22           LOAD_GLOBAL             15 (open + NULL)
+               LOAD_FAST                0 (self)
+               LOAD_ATTR               10 (filename)
+               LOAD_CONST              12 ('w')
+               LOAD_CONST              13 ('utf-8')
+               LOAD_CONST              14 (('encoding',))
+               CALL_KW                  3
+               BEFORE_WITH
+       L1:     STORE_FAST               1 (f)
+
+  23           LOAD_FAST                1 (f)
+               LOAD_ATTR               17 (write + NULL|self)
+               LOAD_CONST              15 ('#EXTM3U\n')
+               CALL                     1
+               POP_TOP
+
+  22   L2:     LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               LOAD_CONST               0 (None)
+               CALL                     2
+               POP_TOP
+               RETURN_CONST             0 (None)
+       L3:     PUSH_EXC_INFO
+               WITH_EXCEPT_START
+               TO_BOOL
+               POP_JUMP_IF_TRUE         1 (to L4)
+               RERAISE                  2
+       L4:     POP_TOP
+       L5:     POP_EXCEPT
+               POP_TOP
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+  --   L6:     COPY                     3
+               POP_EXCEPT
+               RERAISE                  1
+ExceptionTable:
+  L1 to L2 -> L3 [1] lasti
+  L3 to L5 -> L6 [3] lasti
+
+Disassembly of <code object get_d2rs_link at 0x7f752d1283f0, file "<protected>", line 25>:
+  25           RESUME                   0
+
+  26           NOP
+
+  27   L1:     LOAD_FAST                1 (iframe_url)
+               LOAD_ATTR                1 (replace + NULL|self)
+               LOAD_CONST               1 ('/?')
+               LOAD_CONST               2 ('/get_video.php?')
+               CALL                     2
+               STORE_FAST               2 (api_url)
+
+  28           LOAD_FAST                0 (self)
+               LOAD_ATTR                2 (scraper)
+               LOAD_ATTR                5 (get + NULL|self)
+               LOAD_FAST                2 (api_url)
+               LOAD_CONST               3 ('Referer')
+               LOAD_FAST                0 (self)
+               LOAD_ATTR                6 (main_url)
+               BUILD_MAP                1
+               LOAD_CONST               4 (7)
+               LOAD_CONST               5 (('headers', 'timeout'))
+               CALL_KW                  3
+               STORE_FAST               3 (res)
+
+  29           LOAD_FAST                3 (res)
+               LOAD_ATTR                9 (json + NULL|self)
+               CALL                     0
+               STORE_FAST               4 (data)
+
+  30           LOAD_FAST                4 (data)
+               LOAD_ATTR                5 (get + NULL|self)
+               LOAD_CONST               6 ('success')
+               CALL                     1
+               TO_BOOL
+               POP_JUMP_IF_FALSE       35 (to L3)
+
+  32           LOAD_FAST                4 (data)
+               LOAD_ATTR                5 (get + NULL|self)
+               LOAD_CONST               7 ('masterUrl')
+               CALL                     1
+
+  33           LOAD_FAST                4 (data)
+               LOAD_ATTR                5 (get + NULL|self)
+               LOAD_CONST               8 ('referrerUrl')
+               CALL                     1
+
+  31           LOAD_CONST               9 (('url', 'referer'))
+               BUILD_CONST_KEY_MAP      2
+       L2:     RETURN_VALUE
+
+  30   L3:     RETURN_CONST             0 (None)
+
+  --   L4:     PUSH_EXC_INFO
+
+  35           POP_TOP
+       L5:     POP_EXCEPT
+               RETURN_CONST             0 (None)
+
+  --   L6:     COPY                     3
+               POP_EXCEPT
+               RERAISE                  1
+ExceptionTable:
+  L1 to L2 -> L4 [0]
+  L4 to L5 -> L6 [1] lasti
+
+Disassembly of <code object get_pixeldrain_link at 0x7f752db77af0, file "<protected>", line 37>:
+  37           RESUME                   0
+
+  38           NOP
+
+  39   L1:     LOAD_FAST                1 (pd_url)
+               LOAD_ATTR                1 (strip + NULL|self)
+               LOAD_CONST               1 ('/')
+               CALL                     1
+               LOAD_ATTR                3 (split + NULL|self)
+               LOAD_CONST               1 ('/')
+               CALL                     1
+               LOAD_CONST               2 (-1)
+               BINARY_SUBSCR
+               STORE_FAST               2 (pixel_id)
+
+  40           LOAD_CONST               3 ('https://pixeldrain.com/api/file/')
+               LOAD_FAST                2 (pixel_id)
+               FORMAT_SIMPLE
+               LOAD_CONST               4 ('?download')
+               BUILD_STRING             3
+               STORE_FAST               3 (download_link)
+
+  42           LOAD_FAST                3 (download_link)
+
+  43           LOAD_FAST                1 (pd_url)
+
+  41           LOAD_CONST               5 (('url', 'referer'))
+               BUILD_CONST_KEY_MAP      2
+       L2:     RETURN_VALUE
+
+  --   L3:     PUSH_EXC_INFO
+
+  45           POP_TOP
+       L4:     POP_EXCEPT
+               RETURN_CONST             0 (None)
+
+  --   L5:     COPY                     3
+               POP_EXCEPT
+               RERAISE                  1
+ExceptionTable:
+  L1 to L2 -> L3 [0]
+  L3 to L4 -> L5 [1] lasti
+
+Disassembly of <code object get_single_movie_data at 0x55f7d6894670, file "<protected>", line 47>:
+  47            RESUME                   0
+
+  48            NOP
+
+  49    L1:     LOAD_FAST                1 (card)
+                LOAD_ATTR                1 (select_one + NULL|self)
+                LOAD_CONST               1 ('.card-title a')
+                CALL                     1
+                STORE_FAST               2 (title_tag)
+
+  50            LOAD_FAST                2 (title_tag)
+                TO_BOOL
+                POP_JUMP_IF_TRUE         1 (to L3)
+        L2:     RETURN_CONST             0 (None)
+
+  52    L3:     LOAD_FAST                2 (title_tag)
+                LOAD_ATTR                2 (text)
+                LOAD_ATTR                5 (strip + NULL|self)
+                CALL                     0
+                LOAD_ATTR                7 (replace + NULL|self)
+                LOAD_CONST               2 (' izle')
+                LOAD_CONST               3 ('')
+                CALL                     2
+                STORE_FAST               3 (title)
+
+  53            LOAD_FAST                2 (title_tag)
+                LOAD_ATTR                9 (get + NULL|self)
+                LOAD_CONST               4 ('href')
+                CALL                     1
+                STORE_FAST               4 (link)
+
+  54            LOAD_FAST                4 (link)
+                LOAD_ATTR               11 (startswith + NULL|self)
+                LOAD_CONST               5 ('http')
+                CALL                     1
+                TO_BOOL
+                POP_JUMP_IF_TRUE        15 (to L4)
+                LOAD_FAST                0 (self)
+                LOAD_ATTR               12 (main_url)
+                LOAD_FAST                4 (link)
+                BINARY_OP                0 (+)
+                STORE_FAST               4 (link)
+
+  56    L4:     LOAD_FAST                1 (card)
+                LOAD_ATTR                1 (select_one + NULL|self)
+                LOAD_CONST               6 ('.film-poster img')
+                CALL                     1
+                STORE_FAST               5 (img_tag)
+
+  57            LOAD_FAST                5 (img_tag)
+                TO_BOOL
+                POP_JUMP_IF_FALSE       41 (to L6)
+                LOAD_FAST                5 (img_tag)
+                LOAD_ATTR                9 (get + NULL|self)
+                LOAD_CONST               7 ('data-src')
+                CALL                     1
+                COPY                     1
+                TO_BOOL
+                POP_JUMP_IF_TRUE        17 (to L5)
+                POP_TOP
+                LOAD_FAST                5 (img_tag)
+                LOAD_ATTR                9 (get + NULL|self)
+                LOAD_CONST               8 ('src')
+                CALL                     1
+
+  --    L5:     JUMP_FORWARD             1 (to L7)
+
+  57    L6:     LOAD_CONST               3 ('')
+        L7:     STORE_FAST               6 (poster)
+
+  58            LOAD_FAST                6 (poster)
+                TO_BOOL
+                POP_JUMP_IF_FALSE       37 (to L8)
+                LOAD_FAST                6 (poster)
+                LOAD_ATTR               11 (startswith + NULL|self)
+                LOAD_CONST               5 ('http')
+                CALL                     1
+                TO_BOOL
+                POP_JUMP_IF_TRUE        15 (to L8)
+                LOAD_FAST                0 (self)
+                LOAD_ATTR               12 (main_url)
+                LOAD_FAST                6 (poster)
+                BINARY_OP                0 (+)
+                STORE_FAST               6 (poster)
+
+  60    L8:     LOAD_FAST                0 (self)
+                LOAD_ATTR               14 (scraper)
+                LOAD_ATTR                9 (get + NULL|self)
+                LOAD_FAST_LOAD_FAST     64 (link, self)
+                LOAD_ATTR               16 (headers)
+                LOAD_CONST               9 (10)
+                LOAD_CONST              10 (('headers', 'timeout'))
+                CALL_KW                  3
+                STORE_FAST               7 (res)
+
+  61            LOAD_GLOBAL             19 (BeautifulSoup + NULL)
+                LOAD_FAST                7 (res)
+                LOAD_ATTR                2 (text)
+                LOAD_CONST              11 ('html.parser')
+                CALL                     2
+                STORE_FAST               8 (soup)
+
+  63            BUILD_LIST               0
+                STORE_FAST               9 (sources)
+
+  64            LOAD_FAST                8 (soup)
+                LOAD_ATTR                1 (select_one + NULL|self)
+                LOAD_CONST              12 ('div#active-player iframe, div.player-container iframe')
+                CALL                     1
+                STORE_FAST              10 (iframe)
+
+  65            LOAD_FAST               10 (iframe)
+                TO_BOOL
+                POP_JUMP_IF_FALSE      126 (to L11)
+
+  66            LOAD_FAST               10 (iframe)
+                LOAD_ATTR                9 (get + NULL|self)
+                LOAD_CONST              13 ('data-litespeed-src')
+                CALL                     1
+                COPY                     1
+                TO_BOOL
+                POP_JUMP_IF_TRUE        17 (to L9)
+                POP_TOP
+                LOAD_FAST               10 (iframe)
+                LOAD_ATTR                9 (get + NULL|self)
+                LOAD_CONST               8 ('src')
+                CALL                     1
+        L9:     STORE_FAST              11 (src)
+
+  67            LOAD_FAST               11 (src)
+                TO_BOOL
+                POP_JUMP_IF_FALSE       78 (to L11)
+
+  68            LOAD_FAST               11 (src)
+                LOAD_ATTR               11 (startswith + NULL|self)
+                LOAD_CONST              14 ('//')
+                CALL                     1
+                TO_BOOL
+                POP_JUMP_IF_FALSE        5 (to L10)
+                LOAD_CONST              15 ('https:')
+                LOAD_FAST               11 (src)
+                BINARY_OP                0 (+)
+                STORE_FAST              11 (src)
+
+  69   L10:     LOAD_CONST              16 ('d2rs')
+                LOAD_FAST               11 (src)
+                CONTAINS_OP              0
+                POP_JUMP_IF_FALSE       45 (to L11)
+
+  70            LOAD_FAST                0 (self)
+                LOAD_ATTR               21 (get_d2rs_link + NULL|self)
+                LOAD_FAST               11 (src)
+                CALL                     1
+                STORE_FAST              12 (data)
+
+  71            LOAD_FAST               12 (data)
+                TO_BOOL
+                POP_JUMP_IF_FALSE       21 (to L11)
+                LOAD_FAST                9 (sources)
+                LOAD_ATTR               23 (append + NULL|self)
+                LOAD_CONST              17 ('name')
+                LOAD_CONST              18 ('D2RS')
+                BUILD_MAP                1
+                LOAD_FAST               12 (data)
+                DICT_UPDATE              1
+                CALL                     1
+                POP_TOP
+
+  73   L11:     LOAD_FAST                8 (soup)
+                LOAD_ATTR               25 (select + NULL|self)
+                LOAD_CONST              19 ("a.download-btn[href*='pixeldrain.com']")
+                CALL                     1
+                STORE_FAST              13 (pd_links)
+
+  74            LOAD_FAST               13 (pd_links)
+                GET_ITER
+       L12:     FOR_ITER                67 (to L15)
+                STORE_FAST              14 (link_tag)
+
+  75            LOAD_FAST               14 (link_tag)
+                LOAD_ATTR                9 (get + NULL|self)
+                LOAD_CONST               4 ('href')
+                CALL                     1
+                STORE_FAST              15 (href)
+
+  76            LOAD_FAST                0 (self)
+                LOAD_ATTR               27 (get_pixeldrain_link + NULL|self)
+                LOAD_FAST               15 (href)
+                CALL                     1
+                STORE_FAST              12 (data)
+
+  77            LOAD_FAST               12 (data)
+                TO_BOOL
+       L13:     POP_JUMP_IF_TRUE         2 (to L14)
+                JUMP_BACKWARD           46 (to L12)
+       L14:     LOAD_FAST                9 (sources)
+                LOAD_ATTR               23 (append + NULL|self)
+                LOAD_CONST              17 ('name')
+                LOAD_CONST              20 ('PixelDrain')
+                BUILD_MAP                1
+                LOAD_FAST               12 (data)
+                DICT_UPDATE              1
+                CALL                     1
+                POP_TOP
+                JUMP_BACKWARD           69 (to L12)
+
+  74   L15:     END_FOR
+                POP_TOP
+
+  79            LOAD_FAST                9 (sources)
+                TO_BOOL
+                POP_JUMP_IF_FALSE       19 (to L17)
+
+  80            LOAD_GLOBAL             29 (print + NULL)
+                LOAD_CONST              21 ('[+] Başarılı: ')
+                LOAD_FAST                3 (title)
+                FORMAT_SIMPLE
+                BUILD_STRING             2
+                CALL                     1
+                POP_TOP
+
+  81            LOAD_FAST_LOAD_FAST     54 (title, poster)
+                LOAD_FAST                9 (sources)
+                LOAD_CONST              22 (('title', 'poster', 'sources'))
+                BUILD_CONST_KEY_MAP      3
+       L16:     RETURN_VALUE
+
+  79   L17:     NOP
+
+  84            RETURN_CONST             0 (None)
+
+  --   L18:     PUSH_EXC_INFO
+
+  82            LOAD_GLOBAL             30 (Exception)
+                CHECK_EXC_MATCH
+                POP_JUMP_IF_FALSE       10 (to L21)
+                STORE_FAST              16 (e)
+
+  83   L19:     POP_EXCEPT
+                LOAD_CONST               0 (None)
+                STORE_FAST              16 (e)
+                DELETE_FAST             16 (e)
+
+  84            RETURN_CONST             0 (None)
+
+  --   L20:     LOAD_CONST               0 (None)
+                STORE_FAST              16 (e)
+                DELETE_FAST             16 (e)
+                RERAISE                  1
+
+  82   L21:     RERAISE                  0
+
+  --   L22:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+ExceptionTable:
+  L1 to L2 -> L18 [0]
+  L3 to L13 -> L18 [0]
+  L14 to L16 -> L18 [0]
+  L18 to L19 -> L22 [1] lasti
+  L20 to L22 -> L22 [1] lasti
+
+Disassembly of <code object save_incremental at 0x55f7d69e85d0, file "<protected>", line 86>:
+  86            RESUME                   0
+
+  88            LOAD_FAST                1 (data_chunk)
+                TO_BOOL
+                POP_JUMP_IF_TRUE         1 (to L1)
+
+  89            RETURN_CONST             1 (None)
+
+  91    L1:     LOAD_CONST               2 (0)
+                STORE_FAST               2 (count)
+
+  93            LOAD_GLOBAL              1 (open + NULL)
+                LOAD_FAST                0 (self)
+                LOAD_ATTR                2 (filename)
+                LOAD_CONST               3 ('a')
+                LOAD_CONST               4 ('utf-8')
+                LOAD_CONST               5 ('ignore')
+                LOAD_CONST               6 (('encoding', 'errors'))
+                CALL_KW                  4
+                BEFORE_WITH
+        L2:     STORE_FAST               3 (f)
+
+  94            LOAD_FAST                1 (data_chunk)
+                GET_ITER
+        L3:     FOR_ITER               136 (to L11)
+                STORE_FAST               4 (film)
+
+  95    L4:     NOP
+
+  96    L5:     LOAD_FAST                4 (film)
+                TO_BOOL
+                POP_JUMP_IF_FALSE        6 (to L6)
+                LOAD_CONST               7 ('sources')
+                LOAD_FAST                4 (film)
+                CONTAINS_OP              1
+                POP_JUMP_IF_FALSE        2 (to L7)
+
+  97    L6:     JUMP_BACKWARD           19 (to L3)
+
+  98    L7:     LOAD_FAST                4 (film)
+                LOAD_CONST               7 ('sources')
+                BINARY_SUBSCR
+                GET_ITER
+        L8:     FOR_ITER               108 (to L9)
+                STORE_FAST               5 (src)
+
+  99            LOAD_FAST                3 (f)
+                LOAD_ATTR                5 (write + NULL|self)
+                LOAD_CONST               8 ('#EXTINF:-1 tvg-logo="')
+                LOAD_FAST                4 (film)
+                LOAD_CONST               9 ('poster')
+                BINARY_SUBSCR
+                FORMAT_SIMPLE
+                LOAD_CONST              10 ('" group-title="JetFilmizle", ')
+                LOAD_FAST                4 (film)
+                LOAD_CONST              11 ('title')
+                BINARY_SUBSCR
+                FORMAT_SIMPLE
+                LOAD_CONST              12 (' (')
+                LOAD_FAST                5 (src)
+                LOAD_CONST              13 ('name')
+                BINARY_SUBSCR
+                FORMAT_SIMPLE
+                LOAD_CONST              14 (')\n')
+                BUILD_STRING             7
+                CALL                     1
+                POP_TOP
+
+ 100            LOAD_FAST                3 (f)
+                LOAD_ATTR                5 (write + NULL|self)
+                LOAD_CONST              15 ('#EXTVLCOPT:http-referrer=')
+                LOAD_FAST                5 (src)
+                LOAD_CONST              16 ('referer')
+                BINARY_SUBSCR
+                FORMAT_SIMPLE
+                LOAD_CONST              17 ('\n')
+                BUILD_STRING             3
+                CALL                     1
+                POP_TOP
+
+ 101            LOAD_FAST                3 (f)
+                LOAD_ATTR                5 (write + NULL|self)
+                LOAD_CONST              18 ('#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36\n')
+                CALL                     1
+                POP_TOP
+
+ 102            LOAD_FAST                3 (f)
+                LOAD_ATTR                5 (write + NULL|self)
+                LOAD_FAST                5 (src)
+                LOAD_CONST              19 ('url')
+                BINARY_SUBSCR
+                FORMAT_SIMPLE
+                LOAD_CONST              17 ('\n')
+                BUILD_STRING             2
+                CALL                     1
+                POP_TOP
+
+ 103            LOAD_FAST                2 (count)
+                LOAD_CONST              20 (1)
+                BINARY_OP               13 (+=)
+                STORE_FAST               2 (count)
+                JUMP_BACKWARD          110 (to L8)
+
+  98    L9:     END_FOR
+                POP_TOP
+       L10:     JUMP_BACKWARD          138 (to L3)
+
+  94   L11:     END_FOR
+                POP_TOP
+
+ 106            LOAD_FAST                3 (f)
+                LOAD_ATTR                7 (flush + NULL|self)
+                CALL                     0
+                POP_TOP
+
+  93   L12:     LOAD_CONST               1 (None)
+                LOAD_CONST               1 (None)
+                LOAD_CONST               1 (None)
+                CALL                     2
+                POP_TOP
+
+ 108   L13:     LOAD_FAST                0 (self)
+                COPY                     1
+                LOAD_ATTR                8 (total_saved_links)
+                LOAD_FAST                2 (count)
+                BINARY_OP               13 (+=)
+                SWAP                     2
+                STORE_ATTR               4 (total_saved_links)
+
+ 109            LOAD_GLOBAL             11 (print + NULL)
+                LOAD_CONST              21 ('--- [DİSK] ')
+                LOAD_FAST                2 (count)
+                FORMAT_SIMPLE
+                LOAD_CONST              22 (' yeni link başarıyla dosyaya işlendi. Toplam: ')
+                LOAD_FAST                0 (self)
+                LOAD_ATTR                8 (total_saved_links)
+                FORMAT_SIMPLE
+                BUILD_STRING             4
+                CALL                     1
+                POP_TOP
+                RETURN_CONST             1 (None)
+
+  --   L14:     PUSH_EXC_INFO
+
+ 104            POP_TOP
+
+ 105   L15:     POP_EXCEPT
+                JUMP_BACKWARD          218 (to L3)
+
+  --   L16:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+
+  93   L17:     PUSH_EXC_INFO
+                WITH_EXCEPT_START
+                TO_BOOL
+                POP_JUMP_IF_TRUE         1 (to L18)
+                RERAISE                  2
+       L18:     POP_TOP
+       L19:     POP_EXCEPT
+                POP_TOP
+                POP_TOP
+                JUMP_BACKWARD_NO_INTERRUPT 71 (to L13)
+
+  --   L20:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+ExceptionTable:
+  L2 to L4 -> L17 [1] lasti
+  L5 to L6 -> L14 [2]
+  L6 to L7 -> L17 [1] lasti
+  L7 to L10 -> L14 [2]
+  L10 to L12 -> L17 [1] lasti
+  L14 to L15 -> L16 [3] lasti
+  L15 to L17 -> L17 [1] lasti
+  L17 to L19 -> L20 [3] lasti
+
+Disassembly of <code object scrape_jet at 0x55f7d6895150, file "<protected>", line 111>:
+ 111            RESUME                   0
+
+ 112            BUILD_LIST               0
+                STORE_FAST               3 (temp_results)
+
+ 114            LOAD_GLOBAL              1 (range + NULL)
+                LOAD_CONST               1 (1)
+                LOAD_FAST                2 (max_pages)
+                LOAD_CONST               1 (1)
+                BINARY_OP                0 (+)
+                CALL                     2
+                GET_ITER
+        L1:     EXTENDED_ARG             1
+                FOR_ITER               362 (to L20)
+                STORE_FAST               4 (p)
+
+ 115            LOAD_FAST                4 (p)
+                LOAD_CONST               1 (1)
+                COMPARE_OP              88 (bool(==))
+                POP_JUMP_IF_FALSE       16 (to L2)
+                LOAD_FAST                0 (self)
+                LOAD_ATTR                2 (main_url)
+                FORMAT_SIMPLE
+                LOAD_FAST                1 (path)
+                FORMAT_SIMPLE
+                BUILD_STRING             2
+                JUMP_FORWARD            18 (to L3)
+        L2:     LOAD_FAST                0 (self)
+                LOAD_ATTR                2 (main_url)
+                FORMAT_SIMPLE
+                LOAD_FAST                1 (path)
+                FORMAT_SIMPLE
+                LOAD_CONST               2 ('/sayfa-')
+                LOAD_FAST                4 (p)
+                FORMAT_SIMPLE
+                BUILD_STRING             4
+        L3:     STORE_FAST               5 (url)
+
+ 116            LOAD_GLOBAL              5 (print + NULL)
+                LOAD_CONST               3 ('\n>>> Sayfa taranıyor: ')
+                LOAD_FAST                5 (url)
+                FORMAT_SIMPLE
+                BUILD_STRING             2
+                CALL                     1
+                POP_TOP
+
+ 118            NOP
+
+ 119    L4:     LOAD_FAST                0 (self)
+                LOAD_ATTR                6 (scraper)
+                LOAD_ATTR                9 (get + NULL|self)
+                LOAD_FAST_LOAD_FAST     80 (url, self)
+                LOAD_ATTR               10 (headers)
+                LOAD_CONST               4 (15)
+                LOAD_CONST               5 (('headers', 'timeout'))
+                CALL_KW                  3
+                STORE_FAST               6 (res)
+
+ 120            LOAD_GLOBAL             13 (BeautifulSoup + NULL)
+                LOAD_FAST                6 (res)
+                LOAD_ATTR               14 (text)
+                LOAD_CONST               6 ('html.parser')
+                CALL                     2
+                STORE_FAST               7 (soup)
+
+ 121            LOAD_FAST                7 (soup)
+                LOAD_ATTR               17 (select + NULL|self)
+                LOAD_CONST               7 ('div.film-card')
+                CALL                     1
+                STORE_FAST               8 (cards)
+
+ 123            LOAD_FAST                8 (cards)
+                TO_BOOL
+                POP_JUMP_IF_TRUE        17 (to L6)
+
+ 124            LOAD_GLOBAL              5 (print + NULL)
+                LOAD_CONST               8 ('!!! Sayfa ')
+                LOAD_FAST                4 (p)
+                FORMAT_SIMPLE
+                LOAD_CONST               9 (' boş döndü veya Cloudflare engeline takıldı. Döngü kırılıyor.')
+                BUILD_STRING             3
+                CALL                     1
+                POP_TOP
+
+ 125    L5:     POP_TOP
+                JUMP_FORWARD           208 (to L21)
+
+ 127    L6:     LOAD_GLOBAL             19 (ThreadPoolExecutor + NULL)
+                LOAD_CONST              10 (5)
+                LOAD_CONST              11 (('max_workers',))
+                CALL_KW                  1
+                BEFORE_WITH
+        L7:     STORE_FAST               9 (executor)
+
+ 128            LOAD_FAST                8 (cards)
+                GET_ITER
+                LOAD_FAST_AND_CLEAR     10 (card)
+                SWAP                     2
+        L8:     BUILD_LIST               0
+                SWAP                     2
+                GET_ITER
+        L9:     FOR_ITER                30 (to L10)
+                STORE_FAST_LOAD_FAST   169 (card, executor)
+                LOAD_ATTR               21 (submit + NULL|self)
+                LOAD_FAST                0 (self)
+                LOAD_ATTR               22 (get_single_movie_data)
+                LOAD_FAST               10 (card)
+                CALL                     2
+                LIST_APPEND              2
+                JUMP_BACKWARD           32 (to L9)
+       L10:     END_FOR
+                POP_TOP
+       L11:     STORE_FAST              11 (futures)
+                STORE_FAST              10 (card)
+
+ 129            LOAD_GLOBAL             25 (as_completed + NULL)
+                LOAD_FAST               11 (futures)
+                CALL                     1
+                GET_ITER
+       L12:     FOR_ITER                45 (to L15)
+                STORE_FAST              12 (future)
+
+ 130            LOAD_FAST               12 (future)
+                LOAD_ATTR               27 (result + NULL|self)
+                CALL                     0
+                STORE_FAST              13 (movie_data)
+
+ 131            LOAD_FAST               13 (movie_data)
+                TO_BOOL
+       L13:     POP_JUMP_IF_TRUE         2 (to L14)
+                JUMP_BACKWARD           28 (to L12)
+
+ 132   L14:     LOAD_FAST                3 (temp_results)
+                LOAD_ATTR               29 (append + NULL|self)
+                LOAD_FAST               13 (movie_data)
+                CALL                     1
+                POP_TOP
+                JUMP_BACKWARD           47 (to L12)
+
+ 129   L15:     END_FOR
+                POP_TOP
+
+ 127   L16:     LOAD_CONST               0 (None)
+                LOAD_CONST               0 (None)
+                LOAD_CONST               0 (None)
+                CALL                     2
+                POP_TOP
+
+ 134   L17:     LOAD_GLOBAL             30 (time)
+                LOAD_ATTR               32 (sleep)
+                PUSH_NULL
+                LOAD_CONST              12 (1.5)
+                CALL                     1
+                POP_TOP
+
+ 137            LOAD_FAST                4 (p)
+                LOAD_CONST              10 (5)
+                BINARY_OP                6 (%)
+                LOAD_CONST              13 (0)
+                COMPARE_OP              88 (bool(==))
+                POP_JUMP_IF_FALSE       51 (to L19)
+
+ 138            LOAD_GLOBAL              5 (print + NULL)
+                LOAD_CONST              14 ('\n[!] 5 sayfa tamamlandı (Sayfa ')
+                LOAD_FAST                4 (p)
+                FORMAT_SIMPLE
+                LOAD_CONST              15 ('). Diske yazılıyor...')
+                BUILD_STRING             3
+                CALL                     1
+                POP_TOP
+
+ 139            LOAD_FAST                0 (self)
+                LOAD_ATTR               35 (save_incremental + NULL|self)
+                LOAD_FAST                3 (temp_results)
+                CALL                     1
+                POP_TOP
+
+ 140            LOAD_FAST                3 (temp_results)
+                LOAD_ATTR               37 (clear + NULL|self)
+                CALL                     0
+                POP_TOP
+       L18:     EXTENDED_ARG             1
+                JUMP_BACKWARD          362 (to L1)
+
+ 137   L19:     EXTENDED_ARG             1
+                JUMP_BACKWARD          365 (to L1)
+
+ 114   L20:     END_FOR
+                POP_TOP
+
+ 146   L21:     LOAD_FAST                3 (temp_results)
+                TO_BOOL
+                POP_JUMP_IF_FALSE       28 (to L22)
+
+ 147            LOAD_GLOBAL              5 (print + NULL)
+                LOAD_CONST              18 ('\n[!] Kalan son veriler diske yazılıyor...')
+                CALL                     1
+                POP_TOP
+
+ 148            LOAD_FAST                0 (self)
+                LOAD_ATTR               35 (save_incremental + NULL|self)
+                LOAD_FAST                3 (temp_results)
+                CALL                     1
+                POP_TOP
+
+ 150   L22:     LOAD_FAST                0 (self)
+                LOAD_ATTR               40 (total_saved_links)
+                RETURN_VALUE
+
+  --   L23:     SWAP                     2
+                POP_TOP
+
+ 128            SWAP                     2
+                STORE_FAST              10 (card)
+                RERAISE                  0
+
+ 127   L24:     PUSH_EXC_INFO
+                WITH_EXCEPT_START
+                TO_BOOL
+                POP_JUMP_IF_TRUE         1 (to L25)
+                RERAISE                  2
+       L25:     POP_TOP
+       L26:     POP_EXCEPT
+                POP_TOP
+                POP_TOP
+                JUMP_BACKWARD_NO_INTERRUPT 153 (to L17)
+
+  --   L27:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+       L28:     PUSH_EXC_INFO
+
+ 142            LOAD_GLOBAL             38 (Exception)
+                CHECK_EXC_MATCH
+                POP_JUMP_IF_FALSE       29 (to L32)
+                STORE_FAST              14 (e)
+
+ 143   L29:     LOAD_GLOBAL              5 (print + NULL)
+                LOAD_CONST              16 ('Sayfa ')
+                LOAD_FAST                4 (p)
+                FORMAT_SIMPLE
+                LOAD_CONST              17 (' Hatası: ')
+                LOAD_FAST               14 (e)
+                FORMAT_SIMPLE
+                BUILD_STRING             4
+                CALL                     1
+                POP_TOP
+       L30:     POP_EXCEPT
+                LOAD_CONST               0 (None)
+                STORE_FAST              14 (e)
+                DELETE_FAST             14 (e)
+                EXTENDED_ARG             1
+                JUMP_BACKWARD          470 (to L1)
+
+  --   L31:     LOAD_CONST               0 (None)
+                STORE_FAST              14 (e)
+                DELETE_FAST             14 (e)
+                RERAISE                  1
+
+ 142   L32:     RERAISE                  0
+
+  --   L33:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+ExceptionTable:
+  L4 to L5 -> L28 [1]
+  L6 to L7 -> L28 [1]
+  L7 to L8 -> L24 [2] lasti
+  L8 to L11 -> L23 [4]
+  L11 to L13 -> L24 [2] lasti
+  L14 to L16 -> L24 [2] lasti
+  L16 to L18 -> L28 [1]
+  L23 to L24 -> L24 [2] lasti
+  L24 to L26 -> L27 [4] lasti
+  L26 to L28 -> L28 [1]
+  L28 to L29 -> L33 [2] lasti
+  L29 to L30 -> L31 [2] lasti
+  L31 to L33 -> L33 [2] lasti
