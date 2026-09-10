@@ -1,0 +1,35 @@
+name: Kutsal Mekanlar Botu
+
+on:
+  schedule:
+    - cron: '0 8 * * *' # Her sabah 08:00'da çalışır
+  workflow_dispatch: # Senin elle çalıştırman için buton
+
+jobs:
+  indir-ve-kaydet:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Depoyu Çek
+        uses: actions/checkout@v3
+
+      - name: Python Kur
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Gerekli Kütüphaneyi Yükle
+        run: pip install requests
+
+      - name: Python Dosyasını (.py) Çalıştır
+        run: python gorsel_indirici.py
+
+      - name: Görseli Github'a Pushla
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add kutsal_mekanlar/
+          git commit -m "🕌 Yeni Kabe/Aksa görseli eklendi" || exit 0
+          git push
