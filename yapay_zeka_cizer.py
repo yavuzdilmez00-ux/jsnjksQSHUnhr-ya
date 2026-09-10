@@ -1,37 +1,50 @@
-name: Yapay Zeka Kutsal Mekan Botu
+import requests
+import random
+import os
+import datetime
+import urllib.parse
 
-on:
-  schedule:
-    - cron: '0 7 * * *' # Her sabah Türkiye saati ile 10:00 civarı (UTC 07:00) çalışır
-  workflow_dispatch: # Senin elle istediğin zaman çalıştırman için buton
+# Yapay zekaya vereceğimiz İngilizce çizim komutları (Prompts)
+cizim_fikirleri = [
+    "A hyper-realistic photography of the Kaaba in Mecca, beautiful golden hour lighting, 8k resolution, cinematic",
+    "A majestic Islamic mosque with intricate geometric tiles, glowing warm light at sunset, highly detailed",
+    "Masjid al-Aqsa in Jerusalem during morning mist, peaceful and serene atmosphere, photorealistic",
+    "A beautiful modern mosque interior with light rays shining through stained glass windows, unreal engine 5 render",
+    "A stunning grand mosque in the mountains, surrounded by nature and peace, highly detailed photography"
+]
 
-jobs:
-  ai-cizim-ve-kaydet:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write # Botun depoya resim yükleyebilmesi için zorunlu izin
+# Rastgele bir çizim komutu seç
+secilen_komut = random.choice(cizim_fikirleri)
+print(f"Yapay zekaya verilen komut: {secilen_komut}")
 
-    steps:
-      - name: Depoyu Çek
-        uses: actions/checkout@v3
+# Komutu URL formatına (boşlukları %20 yapacak şekilde) dönüştür
+url_uyumlu_komut = urllib.parse.quote(secilen_komut)
 
-      - name: Python Kur
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+# Rastgelelik katmak için sonuna rastgele bir sayı ekliyoruz (her seferinde farklı çizsin diye)
+rastgele_seed = random.randint(1, 100000)
 
-      - name: Gerekli Kütüphaneyi Yükle
-        run: pip install requests
+# Şifresiz AI çizim servisi URL'si
+ai_cizim_url = f"https://image.pollinations.ai/prompt/{url_uyumlu_komut}?width=1080&height=1080&seed={rastgele_seed}&nologo=true"
 
-      - name: Yapay Zeka Çizim Kodunu Çalıştır
-        # Uyarı: Depondaki python dosyasının adının 'yapay_zeka_cizer.py' olduğundan emin ol
-        run: python yapay_zeka_cizer.py
+print("Yapay zeka şu anda sıfırdan görseli çiziyor (bu biraz sürebilir)...")
 
-      - name: Çizilen Görseli Github'a Pushla
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add .
-          git commit -m "🕌 AI Bot: Yepyeni bir kutsal mekan görseli çizildi ve eklendi" || exit 0
-          git pull --rebase origin main
-          git push
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+}
+
+response = requests.get(ai_cizim_url, headers=headers)
+
+if response.status_code == 200:
+    # Klasörü oluştur
+    os.makedirs('ai_kutsal_mekanlar', exist_ok=True)
+    
+    # Bugünün tarihiyle dosya adını belirle
+    tarih = datetime.datetime.now().strftime('%Y-%m-%d')
+    dosya_adi = f'ai_kutsal_mekanlar/{tarih}_ai_mekan.jpg'
+    
+    # Çizilen görseli kaydet
+    with open(dosya_adi, 'wb') as f:
+        f.write(response.content)
+    print(f"Mükemmel! Yapay zeka görseli çizdi ve '{dosya_adi}' olarak kaydedildi.")
+else:
+    print(f"Hata: Görsel çizilemedi. Kod: {response.status_code}")
