@@ -1,0 +1,119 @@
+{
+    "test_surumu": true,
+    "toplam_cuma_mesaji": 10,
+    "toplam_hikaye": 10,
+    "cuma_mesajlari": [
+        {
+            "id": 1,
+            "mesaj": "Haftanın en nurlu sabahına kavuştuk, Rabbim gönlünüzden geçen duaları hakkınızda hayırlı eylesin. Selam ve dua ile kalın.",
+            "kategori": "Cuma Mesajı"
+        },
+        {
+            "id": 2,
+            "mesaj": "Kalplerimizin imanla dolduğu bu bereketli vakitte, Rabbim gönlünüzden geçen duaları hakkınızda hayırlı eylesin. Selam ve dua ile kalın.",
+            "kategori": "Cuma Mesajı"
+        },
+        {
+            "id": 3,
+            "mesaj": "Haftanın en nurlu sabahına kavuştuk, Mevlam bizleri doğru yoldan, Kur'an'ın nurundan ayırmasın. Hayırlı Cumalar dilerim.",
+            "kategori": "Cuma Mesajı"
+        },
+        {
+            "id": 4,
+            "mesaj": "Haftanın en nurlu sabahına kavuştuk, Allah kazancınıza bereket, ömrünüze afiyet ihsan eylesin. Selam ve dua ile kalın.",
+            "kategori": "Cuma Mesajı"
+        },
+        {
+            "id": 5,
+            "mesaj": "Haftanın en nurlu sabahına kavuştuk, Allah kazancınıza bereket, ömrünüze afiyet ihsan eylesin. Hayırlı Cumalar dilerim.",
+            "kategori": "Cuma Mesajı"
+        },
+        {
+            "id": 6,
+            "mesaj": "Gönüllerin huzur bulduğu bu mübarek günde, Mevlam bizleri doğru yoldan, Kur'an'ın nurundan ayırmasın. Selam ve dua ile kalın.",
+            "kategori": "Cuma Mesajı"
+        },
+        {
+            "id": 7,
+            "mesaj": "Gönüllerin huzur bulduğu bu mübarek günde, Allah kazancınıza bereket, ömrünüze afiyet ihsan eylesin. Cumanız mübarek olsun.",
+            "kategori": "Cuma Mesajı"
+        },
+        {
+            "id": 8,
+            "mesaj": "Haftanın en nurlu sabahına kavuştuk, Mevlam bizleri doğru yoldan, Kur'an'ın nurundan ayırmasın. Cumanız mübarek olsun.",
+            "kategori": "Cuma Mesajı"
+        },
+        {
+            "id": 9,
+            "mesaj": "Kalplerimizin imanla dolduğu bu bereketli vakitte, Allah kazancınıza bereket, ömrünüze afiyet ihsan eylesin. Cumanız mübarek olsun.",
+            "kategori": "Cuma Mesajı"
+        },
+        {
+            "id": 10,
+            "mesaj": "Kalplerimizin imanla dolduğu bu bereketli vakitte, Mevlam bizleri doğru yoldan, Kur'an'ın nurundan ayırmasın. Selam ve dua ile kalın.",
+            "kategori": "Cuma Mesajı"
+        }
+    ],
+    "hikayeler": [
+        {
+            "id": 1,
+            "baslik": "Örnek Olay 1",
+            "icerik": "Bir gün Hz. Ebubekir (r.a), tevazu konusunda büyük bir örnek oldu. Olayın sonunda herkes yardımlaşmanın önemini anladı.",
+            "kategori": "Kısa Hikayeler"
+        },
+        {
+            "id": 2,
+            "baslik": "Örnek Olay 2",
+            "icerik": "Bir gün Hz. Osman (r.a), cesaret konusunda büyük bir örnek oldu. Olayın sonunda herkes hakkı gözetmemiz gerektiğini anladı.",
+            "kategori": "Kısa Hikayeler"
+        },
+        {
+            "id": 3,
+            "baslik": "Örnek Olay 3",
+            "icerik": "Bir gün Hz. Osman (r.a), cesaret konusunda büyük bir örnek oldu. Olayın sonunda herkes hakkı gözetmemiz gerektiğini anladı.",
+            "kategori": "Kısa Hikayeler"
+        },
+        {
+            "id": 4,
+            "baslik": "Örnek Olay 4",
+            "icerik": "Bir gün Hz. Osman (r.a), adalet konusunda büyük bir örnek oldu. Olayın sonunda herkes alçakgönüllü olmayı anladı.",
+            "kategori": "Kısa Hikayeler"
+        },
+        {
+            "id": 5,
+            "baslik": "Örnek Olay 5",
+            "icerik": "Bir gün Hz. Ali (r.a), cesaret konusunda büyük bir örnek oldu. Olayın sonunda herkes alçakgönüllü olmayı anladı.",
+            "kategori": "Kısa Hikayeler"
+        },
+        {
+            "id": 6,
+            "baslik": "Örnek Olay 6",
+            "icerik": "Bir gün Hz. Ali (r.a), cömertlik konusunda büyük bir örnek oldu. Olayın sonunda herkes alçakgönüllü olmayı anladı.",
+            "kategori": "Kısa Hikayeler"
+        },
+        {
+            "id": 7,
+            "baslik": "Örnek Olay 7",
+            "icerik": "Bir gün Hz. Ömer (r.a), cömertlik konusunda büyük bir örnek oldu. Olayın sonunda herkes yardımlaşmanın önemini anladı.",
+            "kategori": "Kısa Hikayeler"
+        },
+        {
+            "id": 8,
+            "baslik": "Örnek Olay 8",
+            "icerik": "Bir gün Hz. Ebubekir (r.a), tevazu konusunda büyük bir örnek oldu. Olayın sonunda herkes hakkı gözetmemiz gerektiğini anladı.",
+            "kategori": "Kısa Hikayeler"
+        },
+        {
+            "id": 9,
+            "baslik": "Örnek Olay 9",
+            "icerik": "Bir gün Hz. Osman (r.a), cömertlik konusunda büyük bir örnek oldu. Olayın sonunda herkes yardımlaşmanın önemini anladı.",
+            "kategori": "Kısa Hikayeler"
+        },
+        {
+            "id": 10,
+            "baslik": "Örnek Olay 10",
+            "icerik": "Bir gün Hz. Ali (r.a), cesaret konusunda büyük bir örnek oldu. Olayın sonunda herkes yardımlaşmanın önemini anladı.",
+            "kategori": "Kısa Hikayeler"
+        }
+    ]
+}
