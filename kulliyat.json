@@ -1,14 +1,53 @@
 [
     {
         "kategori_id": "peygamberler_tarihi",
-        "kisiler": []
+        "kisiler": [
+            {
+                "isim": "Hz. Adem",
+                "durum": "HATA",
+                "hata_detayi": "Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.",
+                "gelen_yanit": "Hiç yanıt alınamadı, bağlantı koptu."
+            },
+            {
+                "isim": "Hz. Nuh",
+                "durum": "HATA",
+                "hata_detayi": "Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.",
+                "gelen_yanit": "Hiç yanıt alınamadı, bağlantı koptu."
+            }
+        ]
     },
     {
         "kategori_id": "ashabi_kiram",
-        "kisiler": []
+        "kisiler": [
+            {
+                "isim": "Hz. Ebubekir",
+                "durum": "HATA",
+                "hata_detayi": "Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.",
+                "gelen_yanit": "Hiç yanıt alınamadı, bağlantı koptu."
+            },
+            {
+                "isim": "Hz. Ömer",
+                "durum": "HATA",
+                "hata_detayi": "Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.",
+                "gelen_yanit": "Hiç yanıt alınamadı, bağlantı koptu."
+            }
+        ]
     },
     {
         "kategori_id": "islam_alimleri",
-        "kisiler": []
+        "kisiler": [
+            {
+                "isim": "İmam Rabbani",
+                "durum": "HATA",
+                "hata_detayi": "Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.",
+                "gelen_yanit": "Hiç yanıt alınamadı, bağlantı koptu."
+            },
+            {
+                "isim": "İmam Gazali",
+                "durum": "HATA",
+                "hata_detayi": "Error 402: No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.",
+                "gelen_yanit": "Hiç yanıt alınamadı, bağlantı koptu."
+            }
+        ]
     }
 ]
