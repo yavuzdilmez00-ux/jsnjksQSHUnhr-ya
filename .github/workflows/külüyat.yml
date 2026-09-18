@@ -1,4 +1,4 @@
-name: Kütüphane JSON Botu (Ücretsiz)
+name: Kütüphane JSON Botu (G4F Free)
 
 on:
   workflow_dispatch: 
@@ -21,27 +21,24 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Gerekli Kütüphaneleri Yükle
+      - name: Gerekli Kütüphaneleri Yükle (G4F)
         run: |
           python -m pip install --upgrade pip
-          pip install duckduckgo-search
+          # g4f ve bağlantı engellerini aşmak için gereken yan paketler
+          pip install -U g4f curl_cffi nest_asyncio
 
       - name: Python Botunu Çalıştır
         run: python content_bot.py
 
-      - name: Değişiklikleri Depoya Yaz (Commit ve Push)
+      - name: Değişiklikleri Depoya Yaz
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Yeni oluşan dosyayı ekle
           git add kulliyat.json
           
-          # Eğer dosyada yeni bir veri varsa kaydet, yoksa hata vermeden geç
-          git commit -m "otomasyon: Kütüphane içerikleri (JSON) güncellendi" || echo "Yeni eklenecek bir değişiklik yok."
+          git commit -m "otomasyon: Kütüphane içerikleri (G4F AI) güncellendi" || echo "Yeni eklenecek bir değişiklik yok."
           
-          # Push hatasını önlemek için önce uzak depodaki değişiklikleri birleştir
           git pull --rebase origin main
           
-          # Repoya yaz (Push)
           git push
