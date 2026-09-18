@@ -102,14 +102,25 @@ class MessageEngine:
         pool = self.TEMPLATES[category]
         generated = set()
 
-        # Hedeflenen sayıya (50) ulaşana kadar rastgele permütasyon üretir
-        while len(generated) < count:
+        # Maksimum üretilebilecek benzersiz kombinasyon sayısını hesapla
+        max_possible = len(pool["giris"]) * len(pool["govde"]) * len(pool["kapanis"])
+        
+        # Eğer istenen sayı (50), havuzun kapasitesinden büyükse, hedefi kapasiteye düşür
+        hedef_sayi = min(count, max_possible)
+        
+        # Sonsuz döngüye girmemesi için güvenlik limiti (fail-safe)
+        deneme_sayisi = 0
+        maksimum_deneme = hedef_sayi * 10 
+
+        # Hedeflenen sayıya ulaşana kadar rastgele permütasyon üretir
+        while len(generated) < hedef_sayi and deneme_sayisi < maksimum_deneme:
             giris = random.choice(pool["giris"])
             govde = random.choice(pool["govde"])
             kapanis = random.choice(pool["kapanis"])
             
             mesaj = f"{giris} {govde} {kapanis}"
             generated.add(mesaj)
+            deneme_sayisi += 1
 
         return list(generated)
 
@@ -144,6 +155,6 @@ if __name__ == "__main__":
     kategoriler = ["cuma", "ramazan", "bayram", "kadir_gecesi"]
 
     for kat in kategoriler:
-        # Her biri için 50 mesaj üret ve kaydet
+        # Her biri için maksimum kapasiteye göre (en fazla 50) mesaj üret ve kaydet
         yeni_mesajlar = engine.generate_unique_batch(category=kat, count=50)
         engine.save_to_json(category=kat, new_messages=yeni_mesajlar)
