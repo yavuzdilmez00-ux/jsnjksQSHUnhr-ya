@@ -2,9 +2,9 @@ name: Ozel Gun Mesaj Botu
 
 on:
   schedule:
-    # Her gün Sabah 09:00 ve Akşam 21:00'de günde 2 kere çalışır.
-    - cron: '0 9,21 * * *'
-  workflow_dispatch: # İstediğin zaman manuel çalıştırma butonu
+    # Her Pazar gecesi saat 03:00'te çalışır (Haftada sadece 1 kez)
+    - cron: '0 3 * * 0'
+  workflow_dispatch: # Depo arayüzünden tek tıkla manuel çalıştırma butonu
 
 jobs:
   build-and-push:
@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Mesajları Üret (Her dosya için 1000 adet)
+      - name: Mega Mesaj Paketini Üret (Toplam 280.000 Mesaj)
         run: python bot.py
 
       - name: Depoya Commit Et ve Pushla
@@ -29,6 +29,6 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add veriler/
-          git commit -m "bot: her bolum icin 1000 yeni tebrik mesaji eklendi 🚀" || echo "Yeni degisiklik yok."
+          git commit -m "bot: devasa paket, her kategori icin yepyeni 20.000 mesaj eklendi 🚀" || echo "Yeni degisiklik yok."
           git pull --rebase origin main
           git push
