@@ -8,15 +8,7 @@ class MessageEngine:
         self.output_dir = output_dir
         os.makedirs(self.output_dir, exist_ok=True)
         
-        # 1. HİTAPLAR (Kısa ve öz)
-        self.HITAP = [
-            "", "", "", "", "", 
-            "Canım dostum,", "Değerli kardeşim,", "Kıymetli ailem,", 
-            "Gönül dostlarım,", "Sevdiklerim,", "Canım kardeşim,", 
-            "Kıymetli büyüğüm,", "Güzel insan,"
-        ]
-
-        # 2. KISA DUALAR (Genişletilmiş Havuz)
+        # 1. KISA VE GENEL DUALAR (Hitaplar tamamen kaldırıldı, dualar genişletildi)
         self.KISA_DUALAR = [
             "Allah dualarınızı kabul etsin.", "Gününüz aydın, kalbiniz huzur dolsun.",
             "Rabbim dert verip derman aratmasın.", "Gönlünüzden geçenler hayırlısıyla ömrünüze nasip olsun.",
@@ -28,105 +20,110 @@ class MessageEngine:
             "Rabbim her işinizi rast getirsin.", "Allah sağlığınızı daim etsin.",
             "Ömrünüz bereketli, yuvanız şen olsun.", "Rabbim sizi kötülüklerden korusun.",
             "Gönlünüzden geçen tüm güzellikler sizi bulsun.", "Allah yolunuzu açık etsin.",
-            "Yüzünüzden gülümseme hiç eksik olmasın.", "Dualarınız makbul, gününüz güzel geçsin."
+            "Yüzünüzden gülümseme hiç eksik olmasın.", "Dualarınız makbul, gününüz güzel geçsin.",
+            "Mevla görelim neyler, neylerse güzel eyler.", "Rabbim inayetini ve rahmetini üzerimizden eksik etmesin."
         ]
 
-        # 3. KATEGORİLER (Genişletilmiş)
+        # 2. KATEGORİLER VE GENEL DURUMLAR
         self.KATEGORILER = {
             "cuma": {
                 "ozel": [
-                    "Mübarek Cuma gününün rahmeti üzerinize olsun.",
-                    "Haftanın en güzel gününde dualarda buluşalım.",
-                    "Cuma vaktinin feyzi hanenize dolsun.",
+                    "Mübarek Cuma gününün rahmeti üzerimize olsun.",
+                    "Haftanın en nurlu gününde dualarda buluşalım.",
+                    "Cuma vaktinin feyzi hanelerimize dolsun.",
                     "Af kapılarının açıldığı bu mübarek günde dualarımız bir olsun."
                 ],
                 "kapanis": ["Hayırlı Cumalar.", "Cumanız mübarek olsun.", "Nurlu Cumalar.", "Bereketli Cumalar dilerim.", "Selam ve dua ile hayırlı Cumalar."]
             },
             "ramazan_ayi": {
                 "ozel": [
-                    "On bir ayın sultanının bereketi üzerinize olsun.",
+                    "On bir ayın sultanının bereketi üzerimize olsun.",
                     "Rahmet ayında kalplerimiz imanla, sofralarımız bereketle dolsun.",
-                    "Oruçlarınız ve ibadetleriniz makbul olsun.",
-                    "Ramazan'ın huzuru tüm hanenizi sarsın."
+                    "Oruçlarımız ve ibadetlerimiz makbul olsun.",
+                    "Ramazan'ın huzuru tüm İslam alemini sarsın."
                 ],
                 "kapanis": ["Hayırlı Ramazanlar.", "Ramazan ayınız mübarek olsun.", "Bereketli iftarlar.", "Hayırlı sahurlar.", "Ramazan-ı Şerifiniz mübarek olsun."]
             },
             "ramazan_bayrami": {
                 "ozel": [
-                    "Küslerin barıştığı, sevginin çoğaldığı bu mübarek günde mutluluk sizinle olsun.",
-                    "Şeker tadında, neşe dolu bir bayram geçirmeniz dileğiyle.",
-                    "Bayram sabahının neşesi kalbinize dolsun."
+                    "Küslerin barıştığı, sevginin çoğaldığı bu mübarek günde barış ve huzur hakim olsun.",
+                    "Şeker tadında, neşe dolu bir bayram geçirmemiz dileğiyle.",
+                    "Bayram sabahının neşesi kalplerimize dolsun."
                 ],
-                "kapanis": ["İyi bayramlar.", "Hayırlı bayramlar.", "Ramazan Bayramınız mübarek olsun.", "Mutlu bayramlar dilerim."]
+                "kapanis": ["İyi bayramlar.", "Hayırlı bayramlar.", "Ramazan Bayramımız mübarek olsun.", "Mutlu bayramlar dilerim."]
             },
             "kurban_bayrami": {
                 "ozel": [
-                    "Paylaşmanın ve teslimiyetin bayramında tüm dualarınız kabul olsun.",
-                    "Kestiğiniz kurbanlar, ettiğiniz niyetler makbul olsun.",
-                    "Kardeşliğin pekiştiği bu bayramda yüzünüz hep gülsün."
+                    "Paylaşmanın ve teslimiyetin bayramında tüm dualarımız kabul olsun.",
+                    "Kestiğimiz kurbanlar, ettiğimiz niyetler makbul olsun.",
+                    "Kardeşliğin pekiştiği bu bayramda yüzümüz hep gülsün."
                 ],
-                "kapanis": ["Kurban Bayramınız mübarek olsun.", "İyi bayramlar.", "Hayırlı ve bereketli bayramlar.", "Bayramınız mübarek olsun."]
+                "kapanis": ["Kurban Bayramınız mübarek olsun.", "İyi bayramlar.", "Hayırlı ve bereketli bayramlar.", "Bayramımız mübarek olsun."]
             },
             "mevlid_kandili": {
                 "ozel": [
-                    "Peygamber Efendimizin (s.a.v) şefaati üzerinize olsun.",
-                    "Bu kutlu gecede O'nun (s.a.v) nuru kalbinizi aydınlatsın."
+                    "Peygamber Efendimizin (s.a.v) şefaati üzerimize olsun.",
+                    "Bu kutlu gecede O'nun (s.a.v) nuru kalplerimizi aydınlatsın."
                 ],
                 "kapanis": ["Hayırlı kandiller.", "Mevlid Kandiliniz mübarek olsun.", "Dualarda buluşmak dileğiyle, hayırlı kandiller."]
             },
             "regaip_kandili": {
                 "ozel": [
                     "Üç ayların müjdecisi olan bu gecede rahmet sağanak sağanak yağsın.",
-                    "Regaip gecesinin feyzi ve bereketi hanenizi kuşatsın."
+                    "Regaip gecesinin feyzi ve bereketi hanelerimizi kuşatsın."
                 ],
                 "kapanis": ["Hayırlı kandiller.", "Regaip Kandiliniz mübarek olsun.", "Üç aylarımız mübarek olsun."]
             },
             "mirac_kandili": {
                 "ozel": [
-                    "Mucizelerle dolu bu gecede dualarınız gökyüzüne ulaşsın.",
-                    "Miracın manevi huzuru yüreklerinize dolsun."
+                    "Mucizelerle dolu bu gecede dualarımız gökyüzüne ulaşsın.",
+                    "Miracın manevi huzuru yüreklerimize dolsun."
                 ],
                 "kapanis": ["Hayırlı kandiller.", "Miraç Kandiliniz mübarek olsun.", "Dualarla, hayırlı kandiller."]
             },
             "berat_kandili": {
                 "ozel": [
-                    "Günahların affedildiği bu gecede beratını alanlardan olmanız dileğiyle.",
-                    "İlahi rahmetin tecelli ettiği bu mübarek vakitte dualarınız kabul olsun."
+                    "Günahların affedildiği bu gecede beratını alanlardan olmamız dileğiyle.",
+                    "İlahi rahmetin tecelli ettiği bu mübarek vakitte dualarımız kabul olsun."
                 ],
-                "kapanis": ["Hayırlı kandiller.", "Berat Kandiliniz mübarek olsun.", "Berat geceniz hayırlara vesile olsun."]
+                "kapanis": ["Hayırlı kandiller.", "Berat Kandiliniz mübarek olsun.", "Berat gecemiz hayırlara vesile olsun."]
             },
             "kadir_gecesi": {
                 "ozel": [
-                    "Bin aydan hayırlı olan bu gecede melekler dualarınıza amin desin.",
-                    "Kadir Gecesi'nin nuru tüm hayatınızı aydınlatsın."
+                    "Bin aydan hayırlı olan bu gecede melekler dualarımıza amin desin.",
+                    "Kadir Gecesi'nin nuru tüm hayatımızı aydınlatsın."
                 ],
-                "kapanis": ["Kadir Geceniz mübarek olsun.", "Hayırlı kandiller.", "Dualarınız kabul, geceniz mübarek olsun."]
+                "kapanis": ["Kadir Geceniz mübarek olsun.", "Hayırlı kandiller.", "Dualarımız kabul, gecemiz mübarek olsun."]
             },
             "hicri_yilbasi": {
                 "ozel": [
                     "Yeni Hicri yılın İslam alemine huzur ve barış getirmesini dilerim.",
-                    "Yeni yılda yeni umutlar sizinle olsun."
+                    "Yeni yılda yeni umutlar bizimle olsun."
                 ],
-                "kapanis": ["Hicri Yılbaşınız mübarek olsun.", "Yeni yılınız hayırlı olsun.", "Muharrem ayınız mübarek olsun."]
+                "kapanis": ["Hicri Yılbaşınız mübarek olsun.", "Yeni yılımız hayırlı olsun.", "Muharrem ayımız mübarek olsun."]
             },
             "asure_gunu": {
                 "ozel": [
-                    "Aşurenin bereketi sofranızdan, ağzınızın tadı yuvanızdan eksik olmasın.",
+                    "Aşurenin bereketi sofralarımızdan, ağzımızın tadı yuvamızdan eksik olmasın.",
                     "Birlik ve beraberliğimizin simgesi olan bu günde kardeşliğimiz daim olsun."
                 ],
-                "kapanis": ["Aşure Gününüz mübarek olsun.", "Aşureniz bereketli olsun.", "Hayırlı günler dilerim."]
+                "kapanis": ["Aşure Gününüz mübarek olsun.", "Aşuremiz bereketli olsun.", "Hayırlı günler dilerim."]
             }
         }
 
     def _generate_single_message(self, category: str) -> str:
         cat_data = self.KATEGORILER[category]
+        
+        # 1: Sadece Dua + Kapanış (Çok genel ve kısa)
+        # 2: Özel Anlam + Kapanış
+        # 3: Dua + Özel Anlam + Kapanış
+        # 4: Özel Anlam + Dua + Kapanış (Hitap yerine yerleri değişen dinamik yapı)
         yapi = random.choice([1, 2, 3, 4])
         
-        hitap = random.choice(self.HITAP)
         ozel = random.choice(cat_data["ozel"])
         kapanis = random.choice(cat_data["kapanis"])
         
-        # MUCİZE FORMÜL: Bazen 1 dua, bazen 2 duayı birleştirir (İhtimali 15.000'e katlar)
+        # Bazen 1 dua, bazen 2 duayı birleştir (Hitap silindiği için ihtimali yüksek tutar)
         secilen_dualar = random.sample(self.KISA_DUALAR, k=random.choice([1, 2]))
         dua = " ".join(secilen_dualar)
         
@@ -137,7 +134,7 @@ class MessageEngine:
         elif yapi == 3:
             mesaj = f"{dua} {ozel} {kapanis}"
         else:
-            mesaj = f"{hitap} {ozel} {dua} {kapanis}"
+            mesaj = f"{ozel} {dua} {kapanis}"
             
         return " ".join(mesaj.split())
 
@@ -147,7 +144,7 @@ class MessageEngine:
 
         generated = set()
         deneme = 0
-        maks_deneme = count * 20 # Sonsuz döngüden korur
+        maks_deneme = count * 20
         onceki_uzunluk = 0
         tekrara_dusme_sayaci = 0
 
@@ -155,14 +152,13 @@ class MessageEngine:
             yeni_mesaj = self._generate_single_message(category)
             generated.add(yeni_mesaj)
             
-            # Eğer yeni mesaj bulamayıp takılırsa güvenli çıkış yapar
             if len(generated) == onceki_uzunluk:
                 tekrara_dusme_sayaci += 1
             else:
                 tekrara_dusme_sayaci = 0
                 onceki_uzunluk = len(generated)
                 
-            if tekrara_dusme_sayaci > 1000:
+            if tekrara_dusme_sayaci > 1500: # Güvenli çıkış
                 break
                 
             deneme += 1
@@ -199,7 +195,6 @@ if __name__ == "__main__":
         "berat_kandili", "kadir_gecesi", "hicri_yilbasi", "asure_gunu"
     ]
 
-    # HER ÇALIŞTIĞINDA 11 KATEGORİNİN HER BİRİ İÇİN 1000'ER MESAJ ÜRETİR! (Toplam 11.000)
     for gun in dini_gunler:
         yeni_mesajlar = engine.generate_unique_batch(category=gun, count=1000)
         engine.save_to_json(category=gun, new_messages=yeni_mesajlar)
