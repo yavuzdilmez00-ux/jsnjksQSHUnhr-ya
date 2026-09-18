@@ -2,24 +2,21 @@ name: Dini Hikaye Avcısı (Oto-Çekim)
 
 on:
   schedule:
-    - cron: '0 5,17 * * *' # Günde iki kez çalışır
+    - cron: '0 5,17 * * *'
   workflow_dispatch:
 
 jobs:
   veri-cek-ve-kaydet:
     runs-on: ubuntu-latest
-    
-    # Depoya commit atabilmesi için zorunlu yazma izni
     permissions:
       contents: write 
-      
     timeout-minutes: 30
 
     steps:
     - name: 📥 Depoyu Klonla
       uses: actions/checkout@v3
       with:
-        fetch-depth: 0 # Tüm geçmişi çekmek, rebase işlemlerinde çakışmaları önler
+        fetch-depth: 0
 
     - name: 🐍 Python Ortamını Kur
       uses: actions/setup-python@v4
@@ -29,7 +26,7 @@ jobs:
     - name: 📦 Gerekli Kütüphaneleri Yükle
       run: |
         python -m pip install --upgrade pip
-        pip install requests beautifulsoup4 duckduckgo-search
+        pip install requests beautifulsoup4 ddgs langdetect
 
     - name: 🚀 Hikaye Avcısını Çalıştır
       run: python hikaye_avcisi.py
@@ -38,7 +35,8 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global core.quotepath false 
         git add .
-        git commit -m "🌍 Otomatik Tarama: Yeni hikayeler çekildi ve eklendi" || echo "Yeni veri bulunamadı."
+        git commit -m "📖 Sadece Türkçe kıssalar ve hisseler eklendi" || echo "Yeni veri bulunamadı."
         git pull --rebase origin main
         git push
