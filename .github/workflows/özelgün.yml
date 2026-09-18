@@ -1,0 +1,39 @@
+name: Ozel Gun Mesaj Botu
+
+on:
+  schedule:
+    # Her Pazartesi ve Perşembe gece 03:00'te otomatik çalışır
+    - cron: '0 3 * * 1,4'
+  workflow_dispatch: # Depo arayüzünden tek tıkla çalıştırma butonu
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Depoya yazma/push izni
+
+    steps:
+      - name: Depoyu Klonla
+        uses: actions/checkout@v4
+
+      - name: Python 3.10 Kurulumu
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Gerekli Kütüphaneleri Yükle (requirements.txt olmadan)
+        run: |
+          python -m pip install --upgrade pip
+          # Ekstra ücretsiz kütüphaneler gerektikçe buraya ekleyebilirsin:
+          pip install charset-normalizer
+
+      - name: Mesajları Üret (bot.py)
+        run: python bot.py
+
+      - name: Depoya Commit Et ve Pushla
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add veriler/
+          git commit -m "bot: her bolum icin 50 yeni mesaj eklendi" || echo "Yeni degisiklik yok."
+          git push
