@@ -1,0 +1,12 @@
+# Sepetle giden hurmalar
+
+Ashab-ı Kiram’dan Abdullah İbnü’z-Zübeyr r.a. Hazretleri anlatıyor:  Bir gece Mescid-i Haram’a gitmiştim. Baktım ki bir grup kadın Kâbe’yi tavaf ediyor. Tavaflarını bitirince kapının birinden çıkıp gittiler. Hallerinde bir gariplik sezdiğim için, şunları bir takip edip yerlerini öğreneyim, dedim. Akabe’ye kadar yürüyüp oraya çıktılar. Ben de çıktım. Sonra aşağı doğru indiler. Onların peşi sıra ben de indim. Vadide bir harabeye girdiler. Onların ardından ben de girdim. Bir de baktım, bir toplantı. Bana sordular:  - İbnü’z-Zübeyr, neden geldin?  Ben de onlara sordum:  - Söyleyin hele, siz kimsiniz?  - Bizler cin cemaatiyiz.  - Ben Kâbe’yi tavaf eden bir kadın topluluğu gördüm de onlara hayret ettim. Peşlerine takılıp buraya girdim.  - Ha, onlar bizim kadınlarımız. Sen dilediğin şeyi bizden iste!  - Ben taze hurma isterim, dedim.  O günlerde Mekke’de taze hurma yoktu. Bana bir miktar o hurmadan verdiler, ben de yedim. Sonra dediler ki:  - Artanı da yanında götür!  Kalan hurmaları alıp döndüm. İstiyordum ki bunları Mekke halkına göstereyim.  Evime geldim ve hurmaları kapaklı bir sepete koydum. Sepeti de bir sandığa kapattım. Sonra başımı yaslayıp kestirmeye başlamıştım ki, vallahi uyku ve uyanıklık arasında iken evde bir gürültü duydum. Birbiriyle şöyle konuşuyorlardı:  - Onu nereye koydu nereye?.. Sandığa koydu sandığa!..  - Açın sandığı açın! (Sandık açıldı) Hani o nerede?  - Sepetin içinde. Sepeti de açın!  - Onu açamayız ki. Onun üstüne Allah’ın ismi (besmele) okunmuş.  - Öyleyse onu olduğu gibi alıp götürün!  Böylece hurma sepetini alıp götürdüler. Cinler evden hurma sepetini aşırırken, onlara saldırmadığıma çok pişmanım.
+
+Yeni Şafak olarak yayın hayatına başladığımız ilk günden itibaren ülkemizde demokrasinin tüm kurumları ile yerleşmesi, milli irade ve değerlerimizin hakim olması için tüm gücümüzle çalıştık. Bu ülkenin geleceğinin derin sularda boğulup gitmemesi için çaba sarf ettik. Fırtınalı günlerde sığınılacak bir liman olduk. Bugüne kadar ülkemize yapmış olduğumuz katkıyı bundan sonra da okurlarımızın desteği ile sürdürmeye devam edeceğiz. Her gün Yeni Şafak’la yeni bir umut olacak.
+
+<br>
+
+> ❝ **Kıssadan Hisse:** Fırtınalı günlerde sığınılacak bir liman olduk. Bugüne kadar ülkemize yapmış olduğumuz katkıyı bundan sonra da okurlarımızın desteği ile sürdürmeye devam edeceğiz. Her gün Yeni Şafak’la yeni bir umut olacak. ❞
+
+---
+*Kaynak: https://www.yenisafak.com/ramazan/kissadan-hisse-gun-20*
