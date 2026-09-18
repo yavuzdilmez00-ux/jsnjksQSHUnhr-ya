@@ -4,13 +4,13 @@ on:
   schedule:
     # Her Pazartesi ve Perşembe gece 03:00'te otomatik çalışır
     - cron: '0 3 * * 1,4'
-  workflow_dispatch: # Depo arayüzünden tek tıkla çalıştırma butonu
+  workflow_dispatch: # Depo arayüzünden tek tıkla çalıştırma butonu (Test için)
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Depoya yazma/push izni
+      contents: write  # Depoya yazma/push izni (Zorunlu)
 
     steps:
       - name: Depoyu Klonla
@@ -21,19 +21,24 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Gerekli Kütüphaneleri Yükle (requirements.txt olmadan)
-        run: |
-          python -m pip install --upgrade pip
-          # Ekstra ücretsiz kütüphaneler gerektikçe buraya ekleyebilirsin:
-          pip install charset-normalizer
-
       - name: Mesajları Üret (bot.py)
+        # Sadece Python'un kendi yerleşik kütüphanelerini (json, os, random) kullandığımız için
+        # ekstra bir kütüphane kurulumuna gerek kalmadı, sistem çok daha hızlı çalışacak.
         run: python bot.py
 
       - name: Depoya Commit Et ve Pushla
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Sadece veriler klasöründeki JSON dosyalarını seç
           git add veriler/
-          git commit -m "bot: her bolum icin 50 yeni mesaj eklendi" || echo "Yeni degisiklik yok."
+          
+          # Değişiklik varsa commit at, yoksa hata verme yola devam et
+          git commit -m "bot: yeni ve benzersiz özel gün mesajları eklendi 🚀" || echo "Yeni degisiklik yok."
+          
+          # Depodaki güncel değişiklikleri (senin elle yaptığın düzeltmeleri) ezmeden bota entegre et
+          git pull --rebase origin main
+          
+          # Her şey tamamsa GitHub'a yükle!
           git push
