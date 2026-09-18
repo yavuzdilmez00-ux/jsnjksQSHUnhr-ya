@@ -2,17 +2,15 @@ name: Ozel Gun Mesaj Botu
 
 on:
   schedule:
-    # Her gün, sabah 08:00'den öğleden sonra 13:00'e kadar HER SAAT BAŞI çalışır.
-    # Bu, senin "5 saat boyunca üretmeye devam etsin ve her gün yapsın" isteğinin tam karşılığıdır.
-    # (Not: GitHub sunucuları UTC kullandığı için Türkiye saati ile ayarlamalarda gecikme olabilir, ancak her gün o 5 saatlik dilimde kesinlikle çalışır)
-    - cron: '0 8,9,10,11,12 * * *'
-  workflow_dispatch: # İstediğin zaman manuel de başlatabilirsin
+    # Her gün Sabah 09:00 ve Akşam 21:00'de günde 2 kere çalışır.
+    - cron: '0 9,21 * * *'
+  workflow_dispatch: # İstediğin zaman manuel çalıştırma butonu
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Depoya otomatik JSON yüklemek için gerekli
+      contents: write
 
     steps:
       - name: Depoyu Klonla
@@ -23,7 +21,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Mesajları Üret (bot.py - Her dosyaya 200'er adet)
+      - name: Mesajları Üret (Her dosya için 1000 adet)
         run: python bot.py
 
       - name: Depoya Commit Et ve Pushla
@@ -31,6 +29,6 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add veriler/
-          git commit -m "bot: her bolum icin 200 yeni ve benzersiz mesaj eklendi 🚀" || echo "Yeni degisiklik yok."
+          git commit -m "bot: her bolum icin 1000 yeni tebrik mesaji eklendi 🚀" || echo "Yeni degisiklik yok."
           git pull --rebase origin main
           git push
