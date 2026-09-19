@@ -1,26 +1,28 @@
 # Dini Hikayeler
 
-Anlamlı güzel kısa dini hikayeler hayatın anlamını size gösterecek. Dua etmenin, şükretmenin önemini anlatan ibretlik dini hikayeler ve kıssalar da bulunmaktadır.
+Sıcak, tüm vadiyi kavuruyordu. Küçük karınca Münevver, kendinden kat kat büyük bir buğday tanesini sürükleyerek yuvasına götürüyordu. O kadar küçüktü ki, bir çim yaprağı bile onun için koskoca bir ağaç gibiydi. Tam tepenin üstüne çıkmıştı ki, yerler titremeye başladı. Ufukta, Hz. Süleyman’ın muazzam ordusu göründü. Rüzgara hükmeden, cinlere ve hayvanlara söz geçiren bir peygamberdi o. Fillerin kocaman ayakları, atların nalları……
 
-Hz İbrahim peygamber, kral Nemrut’ a karşı gelmiş. Nemrut, ne güçlü ve acımasız bir kral olduğunu herkes görsün anlasın diye Hz ibrahim‘ in ateşte yakılması emrini vermiş. Meydanda odunlardan büyük bir yığın yapıp odunları tutuşmuşlar. O kadar büyük bir alevmiş ki bulutlara kadar yükselmiş. Bütün
+Yusuf, bahçedeki küçük nar fidanının etrafında dolanıp duruyordu. “Dede, neden büyümüyor? Her gün suluyorum, dua ediyorum ama hiç değişmiyor!” diye sızlandı. Dedesi, torununu sevgiyle süzerek, “Yusuf,” dedi, “Allah, her şeyi bir ölçüyle ve bir vakitle yaratmıştır. Toprağın altında, göremediğimiz bir hazine var. Kökler, şu an o hazineyi topluyor. Sabretmeyi öğrenmelisin.” Ama Yusuf’un sabrı tükenmek üzereydi. O gece, üzüntüyle uykuya daldı.…
 
-Seyyahın yolu uzak bir diyarda şirin bir köye düşer. Köylülere, tanrı misafirini ağırlayacak biri var mı diye sorar. Köylüler, seyyaha ancak çiftlik sahibi Süleyman diye birinin yardımcı olacağını ve oraya gitmesini söylerler.  Seyyah yoldayken birkaç köylüyle daha sohbet eder. Köylülerden Süleyman’ın, o yörenin en zenginlerinden
+Yasin, köyün en meraklı çocuğuydu. Her akşam caminin avlusunda oturur, minarenin yanındaki gökyüzünü izlerdi. Gözleri hep aynı yıldızda takılı kalırdı; çünkü o yıldız, diğerlerinden farklı parlıyordu.Bir akşam dua ederken, “Allah’ım, kalbimi bu yıldız gibi parlak yap,” dedi içtenlikle. O gece rüzgâr hafifçe esti, yıldız bir anlığına daha da parladı.Sabah olduğunda Yasin, köyün çeşmesinde yaşlı bir adam gördü. Adamın kovası delinmişti,…
 
-Dervişe bir gün sormuşlar: – Sevginin sadece sözünü edenlerle, onu yaşayanlar arasında ne fark vardır? Size farkı gösteriyim deyip, önce sevgiyi dilden kalbine indirememiş olanları çağırarak onlara bir sofra hazırlamış. Hepsi sofrada yerlerini almışlar. Derken tabaklar içinde sıcak çorbalar gelmiş ve arkasından da derviş
+Güneş doğarken, sabahın serinliğinde küçük bir serçe kanat çırptı. Adı Nur’du. Her gün gün doğmadan uyanır, “Bugün de herkese mutluluk ver Allah’ım,” diye dua ederdi.Köyde herkes Nur’u tanırdı. Çocuklar onun neşesini, büyüklerse cıvıltısını severdi. Ama bir sabah yağmur hiç durmadı. Nur’un yuvası rüzgârla savrulmuş, dallar kırılmıştı. Kuş üzüldü.“Ben her gün dua ediyorum, ama neden yuvamı korumadın Allah’ım?” diye mırıldandı.O gece…
 
-Çölde devesiyle birlikte yürümekte olan bir çöl insanı güçlükle hareket eden, susuzluktan ölmek üzere olan bir adama rastlamış. Adam Allah rızası için su istemiş. Devesinden inip bir çare adama suyundan vermiş. Suyu içen adam birden çöl insanını ittiği gibi deveye atlayıp kaçmaya başlamış. Çöl
+Bir zamanlar, Ali adında küçük bir çocuk yaşarmış. Ali, köyündeki herkes tarafından sevilen, iyi kalpli ve yardımsever bir çocukmuş. Ali’nin en çok sevdiği şeylerden biri, her sabah erkenden uyanıp bahçeye gitmek ve oradaki çiçeklerle ilgilenmekmiş. Ancak bir gün bahçedeki tüm çiçekler solmuş, toprağı kurumuş ve bir damla su bile bulunamaz hale gelmiş. Köyde uzun zamandır yağmur yağmıyormuş, ne ağaçlar meyve…
 
-Çoçuk hikayeleri kısa bir hikaye, baba ve küçük çocuğu bir gün göle balık tutmaya giderler. Göl kenarına da çadır kurarlar. Sabah oltalarını göle atıp çadıra dönerler. Bir saat sonra, oltalarını kontrol ederler, dört beş balık takıldığını görürler. Çoçuk babasına: – Baba, ben balıkların oltaya
+Bir varmış, bir yokmuş. Küçük bir köyde, ailesiyle birlikte yaşayan Yusuf adında bir çocuk varmış. Yusuf, annesiyle babasını çok sever, onlardan her gün yeni şeyler öğrenirmiş. Ancak bir gün Yusuf, insanları mutlu eden ve onların kalplerini ferahlatan bir şeyin ne olduğunu merak etmiş. Bir sabah Yusuf, büyükannesine giderek sormuş: “Büyükanne, insanlar nasıl bu kadar mutlu oluyor? Kalpleri neden bu kadar…
 
-Bir profesörün mezun edeceği bilgisayar mühendisliği öğrencilerine verdiği son ders: Bilgisayar Mühendisi Arkadaşlar, İnşallah iyi bir donanımcı veya iyi bir yazılımcı veya iyi bir networkçü veya iyi bir sistem yöneticisi olacaksınız. Yalnız şu önemli meseleleri aklınızdan çıkarmayın; Bu kainatın öyle bir donanımcısı vardır ki, yer
+Bir zamanlar, küçük bir köyde Yusuf adında iyi kalpli bir çocuk yaşardı. Yusuf, her sabah annesiyle birlikte namaz kılar, dualar ederdi. Annesi ona, “Dua etmek, kalbimizdeki iyiliği ve inancı güçlendirir. Allah’a olan inancımızla her zorluğu aşabiliriz,” derdi. Yusuf, bu sözleri hiç unutmaz, her gün Allah’a şükreder ve dualarını eksik etmezdi. Bir gün, köyde büyük bir kuraklık başladı. Yağmur yağmıyor, tarlalar…
 
-İkiz kardeşler annelerin rahminde haftalar geçtikçe büyüyüp gelişmeye başlamışlar. Kendilerini koruyan rahat, güvenli yeri tanıdıkça daha da mutlu olmuşlar. Birbirlerine hep aynı şeyi söylüyorlarmış: – Anne rahminde olmamız, burada yaşamamız ne harika değil mi? Hayat ne güzel değil mi kardeşim! Daha da büyümüşler ve
+Bir zamanlar, Yusuf adında merhametli bir çocuk yaşarmış. Yusuf, köylerinde her hafta sonu kurulan pazara gitmeyi çok severmiş. Bir gün pazara gitmek için annesinden izin aldığında, cebinde sadece birkaç kuruş varmış. Yusuf, parasını nasıl harcayacağını düşünürken büyükannesi ona, “Yavrum, Allah sadakayı sever. Küçük ya da büyük fark etmez, önemli olan paylaşmak,” demiş. Yusuf, bu sözlerin anlamını merak etmiş ve pazara…
 
-Gazneliler devletinin en büyük ve değerli hükümdarlarından biri olan Sultan Mahmud, Hindistan’a çeşitli sefer ler düzenlemişti. Bu seferlerden birinde çok şiddetli bir direniş ile karşılaşmış, zafer kazanacağından şüpheye düşmüştü. Tam bu zor durumda iken Allah’a şöyle yalvardı: – Ey Rabbim, bu savaştan galip çıkarsam,
+Bir zamanlar, küçük bir köyde Ali adında bir çocuk yaşarmış. Ali, oyuncaklarını ve yiyeceklerini pek kimseyle paylaşmayı sevmezmiş. Okulda arkadaşlarıyla oynar, ancak ne zaman yiyeceklerini paylaşması gerekse tereddüt edermiş. Bir gün, Ali’nin büyükannesi ona, “Yavrum, paylaşmak hem Allah’ın hem de insanların gönlünü kazanmanın en güzel yoludur,” demiş. Ali, büyükannesinin bu sözlerine pek aldırış etmemiş. Ertesi gün, okulda Ali ve arkadaşları…
+
+Bir zamanlar, küçük bir köyde Ahmet adında sevimli bir çocuk yaşarmış. Ahmet, çok meraklı ve sevgi dolu bir çocukmuş. Bir gün, büyükannesi ona, “Ahmet, iyilik yapmak ve başkalarına yardım etmek, Allah’ın en sevdiği şeydir,” demiş. Ahmet, büyükannesinin bu sözleri üzerine düşünmüş ve ertesi gün ne yapabileceğini planlamış. Sabah erkenden uyanan Ahmet, köyde yardıma ihtiyacı olanları aramaya çıkmış. İlk olarak, yaşlı…
 
 <br>
 
 > ❝ **Kıssadan Hisse:** Her işte Allah'ın rızasını gözetmek ve samimiyetle amel etmektir. ❞
 
 ---
-*Kaynak: https://www.hayatakarken.com/category/dini-hikayeler*
+*Kaynak: https://masalist.com/dini-hikayeler/*
