@@ -1,28 +1,40 @@
 # Kıssadan Hisse
 
-Kıssadan Hisse – Hayatımıza dair ders veren hikayelerdir. Ülkemizde özellikle Anadolu’da insanlar birbirlerini uyarmak istedikleri konularda bunu karşıdakinin kalbinin kırılmaması adına kıssadan hisseler anlatarak yaparlar. Kıssadan Hisselerin en önemli özelliğinin ders verici olmasından dolayı büyükler de çoğunlukla çocuklarına kıssadan hisseler anlatırlar.
+Kıssadan Hisse Oku; “Ebu Talha’nın elinden topla tüfekle alınması mümkün olmayan 600 ağaçlı hurma bahçesini, kendi rızası ile fakir fukaraya erdiren duygu, iman şuurundan başka ne olabilirdi?”
 
-Kıssadan Hisseler genel itibarı ile İslam inancına dayalı hikayelerden oluşur. Bir çoğuda tasavvuf üzerine anlatılmıştır. Kıssadan hisse adından da anlaşılacağı üzerine kısa hikayelerden oluşur. Kısa, öz ve eğitici birçok şey üzerine yazılmış olan hikaye çeşitlerine de kıssadan hisse denilmektedir. Bu hikayelerin(öykülerin) diğer bir önemli özelliği de çoğunlukla yaşanmış gerçek hikaye olmalarıdır. Özellikle tasavvufi hikayelerin bir çoğu gerçekten yaşanmıştır. Mesnevide yazılan hikayelerin bir çoğuda kıssadan hisse olarak geçmektedir.
+MESCİD-İ Saadet’te Ashab-ı Kiram toplanmışlar, derin bir vecd ve huşu içinde Allah’ın Resûlünü dinlemekteydiler. Hazret-i Fahr-i Kâinat Efendimiz ise, Al-i İmrân sûresinden şu mealdeki Âyet-i Kerimeyi okuyordu: ” Muhtaçlara, fakirlere yardım ederken malınızın kötüsünü değil de, iyisini vermedikçe imân-ı kâmile (olgun iman) kavuşamazsınız. İmânda en yüksek mertebeye çıkmak istiyorsanız, yoksullara malınızın en hoşunuza gidenini bağaşlayınız.”
 
-Kıssadan hisselerin çıkış kaynağı esas olarak halk dan birileri olmasından dolayı kulaktan kulağa yayılarak bir süre sonra esas kaynak takip edilemez olmaktadır. Bundan dolayı anonim olarak geçerler.
+Âyet-i Kerîmeyi büyük bir dikkat ve hassasiyetle dinleyenlerin içinde Ebu Talha da bulunuyordu. Ebu Talha’nın Mescid-i Saadet’e yakın bir yerde, içinde 600 hurma ağacı bulunan pek kıymetli bir hurma bahçesi vardı. Sık sıkdâvet ettiği Resûlullah’a burada ikramda bulunurdu..
 
-Sizlerinde bizlere göndermek istediğiniz kıssadan hisseleriniz var ise sitemizdeki Hikayenizi Ekleyin sayfasından yayınlanması için bizlere ulaştırabilirsiniz.
+Bu zat derin bir vecd ve huşuu içinde Âyet-i Kerimeyi dinledikten soma ayağa kalkarak şu açıklamayı yaptı. «- Yâ Resûlellah, benim servetim içinde en kıymetli ve bana en sevgili olan, işte şu şehrin içindeki sizin de bildiğiniz bahçemdir. Bu andan itibaren Allah rızası için onu Allah’ın Resûlüne bırakıyorum. İstediğiniz gibi tasarruf eder, dilediğiniz fakire verebilirsiniz.
 
-Gerçek Hikaye İki öfkeli adam bir garibanı sürükleyip sokakta yürüyen kadı efendinin önüne yıkarlar. O mahallede yaşayan dört yaşındaki çocuk,…
+Bu sözleri söyledikten soma Ebu Talha, sevinçli ve neş’eli bir hal ile kararını tatbik için Mescid-i Şerifden çıkarak bahçeye gitti.
 
-İbretlik Sözler – 4 “Yemeğin tuzunu kaçırana acemi aşçı, iyiliğin dozunu kaçırana enayi derler.” Sinan KORKMAZ “Eskiyle eski diye alay…
+Bir hurma ağacının gölgesinde oturan hanımı ile duvarın dışında bekleyen Ebu Talha arasında şu ibretli konuşma oldu:
 
-İbretlik Sözler – 3  “Mucitler angarya işlerle uğraşmazlar.”Sinan KORKMAZ “Mızmızlarla yola çıkanların yolu bitmez.”Sinan KORKMAZ “Bir şeyin imkânsız olduğuna inanmayın.”Sinan…
+Hanımı: “- Yâ Ebu Talha, duvarın dışında ne bekliyorsun? İçeri girsen ya!”
 
-Kıssadan Hisse; “En Büyük Cömert” Kıssadan Hisse; Önemli bir sefer hazırlığı yapılıyordu. Peygamberimiz herkesten yapabileceği yardımı en üst sınırda yapmasını…
+Ebu Talha: “- Ben içeri giremem, sen eşyanı toplayıp da dışarı çıksan ya!”
 
-Kıssadan Hisse; “600 Ağaçlı Hurma Bahçesini Bağışladı” Kıssadan Hisse Oku; “Ebu Talha’nın elinden topla tüfekle alınması mümkün olmayan 600 ağaçlı hurma bahçesini, kendi…
+Ebu Talha: “- Hayır, artık bu bahçe Medine fukarasınındır. diyerek Âyet-i Kerîmeyi ve verdiği kararını anlattı. Hanımının ” İkimiz namına mı, yoksa şahsın için mi bağışladın? ” diye bir sualine “-ikimiz namına” diye cevap veren Ebu Talha, bu sefer hanımından şu sözleri işitti:
 
-Kıssadan Hisse; “Bu Dünya Kimseye Kalmaz” Hikaye oku: Halife Harun er-Reşid’e, o zamanın Fransa kralı bir gül fidanı hediye etmişti.…
+” – Allah senden razı olsun Eba Talha. Etrafımızdaki fakirleri gördükçe aynı şeyi düşünürdüm de sana söylemeye bir türlü cesaret edemezdim; Allah hayrımızı kabul buyursun, işte ben de geliyorum! “
+
+Aziz okuyucu, müsaade buyurursanız burada bir sual sormak istiyorum:
+
+– Ebu Talha’nın elinden topla tüfekle alınması mümkün olmayan bu 600 ağaçlı hurma bahçesini, kendi rızası ile fukaraya verdiren nedir?
+
+– O’nu böyle içtimai (sosyal) fedakârlığa sevkeden bu tesir edici sebebin memleket sathında bütün insanlarda kökleşip kuvvetlenmesi halinde nasıl bir netice doğar?
+
+– Değil âhiretimiz, dünyamızın dahi intizama girmesi için bu müessire şiddetle muhtaç değil miyiz?
+
+– Ebu Talha’ya bu fedakârlığı yaptıran müeyyidenin aleyhinde bulunmak, bu duygu ve îmân kuvvetinin bütün insanlarda yerleşmesine mani olmayı düşünmek, fukaraya yapılan yardımın aleyhinde bulunmak kadar gayr-ı insani ve ahmakça bir düşünce mahsulü olmaz mı?”
+
+Kitap okumayı seven insanlar daha zeki ve daha başarılı olurlar. Bende bu yüzden kitap okumayı sevdirmek istedim bu site ile. Gizli kalmış bütün bilgilerin kitaplarda saklı olduğuna inandığımdan, kültür seviyemizi yükseltmek, bilgi hazinemizi daha da zenginleştirmek, gizli yeteneklerin ortaya çıkmasına destek olabilmek için, okusun yazsın benim ülkemin insanları diye bir işin ucundan tutmak isteyen birisiyim.
 
 <br>
 
-> ❝ **Kıssadan Hisse:** Hoş Görmeli Kimsesizlikten bir kimse arayanı, fedakârlık eden adanmışlık ehlini, çaba harcayıp hakkıyla elde ettiği başarıların tadını çıkaranı hoş görmeli… ❞
+> ❝ **Kıssadan Hisse:** Her işte Allah'ın rızasını gözetmek ve samimiyetle amel etmektir. ❞
 
 ---
-*Kaynak: https://secmehikayeler.com/konular/kissadan-hisse-2*
+*Kaynak: https://secmehikayeler.com/dini-hikayeler/kissadan-hisse.html*
