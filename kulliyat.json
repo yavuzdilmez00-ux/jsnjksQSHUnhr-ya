@@ -5,13 +5,13 @@
             {
                 "isim": "Hz. Adem",
                 "durum": "HATA",
-                "hata_detayi": "Error 404: Error model_not_found: The model `openai-fast` is not available without an API key. Only free models are allowed — provide your own key for paid models.",
+                "hata_detayi": "module 'g4f.Provider' has no attribute 'PollinationsAI'",
                 "gelen_yanit": "Hiç yanıt alınamadı, bağlantı koptu."
             },
             {
                 "isim": "Hz. Nuh",
                 "durum": "HATA",
-                "hata_detayi": "Error 404: Error model_not_found: The model `openai-fast` is not available without an API key. Only free models are allowed — provide your own key for paid models.",
+                "hata_detayi": "module 'g4f.Provider' has no attribute 'PollinationsAI'",
                 "gelen_yanit": "Hiç yanıt alınamadı, bağlantı koptu."
             }
         ]
@@ -22,13 +22,13 @@
             {
                 "isim": "Hz. Ebubekir",
                 "durum": "HATA",
-                "hata_detayi": "Error 404: Error model_not_found: The model `openai-fast` is not available without an API key. Only free models are allowed — provide your own key for paid models.",
+                "hata_detayi": "module 'g4f.Provider' has no attribute 'PollinationsAI'",
                 "gelen_yanit": "Hiç yanıt alınamadı, bağlantı koptu."
             },
             {
                 "isim": "Hz. Ömer",
                 "durum": "HATA",
-                "hata_detayi": "Error 404: Error model_not_found: The model `openai-fast` is not available without an API key. Only free models are allowed — provide your own key for paid models.",
+                "hata_detayi": "module 'g4f.Provider' has no attribute 'PollinationsAI'",
                 "gelen_yanit": "Hiç yanıt alınamadı, bağlantı koptu."
             }
         ]
@@ -39,13 +39,13 @@
             {
                 "isim": "İmam Rabbani",
                 "durum": "HATA",
-                "hata_detayi": "Error 429: Error 429: Too Many Requests",
+                "hata_detayi": "module 'g4f.Provider' has no attribute 'PollinationsAI'",
                 "gelen_yanit": "Hiç yanıt alınamadı, bağlantı koptu."
             },
             {
                 "isim": "İmam Gazali",
                 "durum": "HATA",
-                "hata_detayi": "Error 429: Error 429: Too Many Requests",
+                "hata_detayi": "module 'g4f.Provider' has no attribute 'PollinationsAI'",
                 "gelen_yanit": "Hiç yanıt alınamadı, bağlantı koptu."
             }
         ]
